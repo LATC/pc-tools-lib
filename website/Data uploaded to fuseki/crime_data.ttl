@@ -1,0 +1,1134 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+
+
+<http://example.org/dataset/police-records> a qb:DataSet ;
+	rdfs:label "Police records grouped by London Boroughs" .
+
+_:node1704m7oeqx1 a qb:DataStructureDefinition .
+
+_:node1704m7oeqx2 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/area-name> a qb:DimensionProperty ;
+	rdfs:label "Borough" .
+
+_:node1704m7oeqx2 qb:dimension <http://example.org/def/statistical-dimension/area-name> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx2 .
+
+_:node1704m7oeqx3 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/offenses2008> a qb:MeasureProperty ;
+	rdfs:label "Offenses 2008" ;
+	<http://example.org/year> "2008" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m7oeqx3 qb:measure <http://example.org/def/statistical-dimension/offenses2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx3 .
+
+_:node1704m7oeqx4 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/offenses2009> a qb:MeasureProperty ;
+	rdfs:label "Offenses 2009" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m7oeqx4 qb:measure <http://example.org/def/statistical-dimension/offenses2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx4 .
+
+_:node1704m7oeqx5 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/offenses2010> a qb:MeasureProperty ;
+	rdfs:label "Offenses 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx5 qb:measure <http://example.org/def/statistical-dimension/offenses2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx5 .
+
+_:node1704m7oeqx6 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/violence2008> a qb:MeasureProperty ;
+	rdfs:label "Violence2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx6 qb:measure <http://example.org/def/statistical-dimension/violence2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx6 .
+
+_:node1704m7oeqx7 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/violence2009> a qb:MeasureProperty ;
+	rdfs:label "Violence 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx7 qb:measure <http://example.org/def/statistical-dimension/violence2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx7 .
+
+_:node1704m7oeqx8 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/violence2010> a qb:MeasureProperty ;
+	rdfs:label "Violence 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx8 qb:measure <http://example.org/def/statistical-dimension/violence2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx8 .
+
+_:node1704m7oeqx9 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/sexual_offenses2008> a qb:MeasureProperty ;
+	rdfs:label "Sexual offenses 2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx9 qb:measure <http://example.org/def/statistical-dimension/sexual_offenses2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx9 .
+
+_:node1704m7oeqx10 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/sexual_offenses2009> a qb:MeasureProperty ;
+	rdfs:label "Sexual offenses 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx10 qb:measure <http://example.org/def/statistical-dimension/sexual_offenses2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx10 .
+
+_:node1704m7oeqx11 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/sexual_offenses2010> a qb:MeasureProperty ;
+	rdfs:label "Sexual offenses 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx11 qb:measure <http://example.org/def/statistical-dimension/sexual_offenses2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx11 .
+
+_:node1704m7oeqx12 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/robbery2008> a qb:MeasureProperty ;
+	rdfs:label "Robbery 2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx12 qb:measure <http://example.org/def/statistical-dimension/robbery2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx12 .
+
+_:node1704m7oeqx13 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/robbery2009> a qb:MeasureProperty ;
+	rdfs:label "Robbery 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx13 qb:measure <http://example.org/def/statistical-dimension/robbery2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx13 .
+
+_:node1704m7oeqx14 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/robbery2010> a qb:MeasureProperty ;
+	rdfs:label "Robbery 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx14 qb:measure <http://example.org/def/statistical-dimension/robbery2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx14 .
+
+_:node1704m7oeqx15 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/burglary2008> a qb:MeasureProperty ;
+	rdfs:label "Burglary 2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx15 qb:measure <http://example.org/def/statistical-dimension/burglary2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx15 .
+
+_:node1704m7oeqx16 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/burglary2009> a qb:MeasureProperty ;
+	rdfs:label "Burglary 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx16 qb:measure <http://example.org/def/statistical-dimension/burglary2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx16 .
+
+_:node1704m7oeqx17 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/burglary2010> a qb:MeasureProperty ;
+	rdfs:label "Burglary 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx17 qb:measure <http://example.org/def/statistical-dimension/burglary2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx17 .
+
+_:node1704m7oeqx18 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/theft_and_handling2008> a qb:MeasureProperty ;
+	rdfs:label "Theft and Handling 2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx18 qb:measure <http://example.org/def/statistical-dimension/theft_and_handling2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx18 .
+
+_:node1704m7oeqx19 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/theft_and_handling2009> a qb:MeasureProperty ;
+	rdfs:label "Theft and Handling 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx19 qb:measure <http://example.org/def/statistical-dimension/theft_and_handling2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx19 .
+
+_:node1704m7oeqx20 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/theft_and_handling2010> a qb:MeasureProperty ;
+	rdfs:label "Theft and Handling 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx20 qb:measure <http://example.org/def/statistical-dimension/theft_and_handling2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx20 .
+
+_:node1704m7oeqx21 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/drugs2008> a qb:MeasureProperty ;
+	rdfs:label "Drugs 2008" ;
+	<http://example.org/year> "2008" .
+
+_:node1704m7oeqx21 qb:measure <http://example.org/def/statistical-dimension/drugs2008> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx21 .
+
+_:node1704m7oeqx22 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/drugs2009> a qb:MeasureProperty ;
+	rdfs:label "Drugs 2009" ;
+	<http://example.org/year> "2009" .
+
+_:node1704m7oeqx22 qb:measure <http://example.org/def/statistical-dimension/drugs2009> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx22 .
+
+_:node1704m7oeqx23 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/drugs2010> a qb:MeasureProperty ;
+	rdfs:label "Drugs 2010" ;
+	<http://example.org/year> "2010" .
+
+_:node1704m7oeqx23 qb:measure <http://example.org/def/statistical-dimension/drugs2010> .
+
+_:node1704m7oeqx1 qb:component _:node1704m7oeqx23 .
+
+<http://example.org/dataset/police-records> qb:structure _:node1704m7oeqx1 ;
+	void:vocabulary "http://purl.org/linked-data/cube#" .
+
+<http://example.org/dataset/police-records/barking-and-dagenham> a qb:Observation .
+
+<http://example.org/barking-and-dagenham> rdfs:label "Barking and Dagenham" .
+
+<http://example.org/dataset/police-records/barking-and-dagenham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barking-and-dagenham> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "116.56198424223338" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "112.99920844176923" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "106.6924074084377" ;
+	<http://example.org/def/statistical-dimension/violence2008> "31.406346786105683" ;
+	<http://example.org/def/statistical-dimension/violence2009> "30.82418622255867" ;
+	<http://example.org/def/statistical-dimension/violence2010> "24.902498595200875" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.2325785543356702" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.5985726602164958" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.4576529561980849" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.538496172895092" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "5.003959968320253" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "5.213056564723686" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.575277772693159" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "14.669129631641857" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.312160275062451" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "34.43710225574002" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "34.87971239319396" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "35.13388709309506" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "9.106475716064757" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "6.748225091723447" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "5.630323632337641" .
+
+<http://example.org/dataset/police-records/barnet> a qb:Observation .
+
+<http://example.org/barnet> rdfs:label "Barnet" .
+
+<http://example.org/dataset/police-records/barnet> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barnet> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "78.00927569153593" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "76.57802079932844" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "73.8114521048369" ;
+	<http://example.org/def/statistical-dimension/violence2008> "15.566772867451212" ;
+	<http://example.org/def/statistical-dimension/violence2009> "14.469347985435302" ;
+	<http://example.org/def/statistical-dimension/violence2010> "12.72264631043257" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.7594485235336802" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9663215662917866" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.8701945444833112" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "2.77850459138539" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "3.008464598644177" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "2.7685397388841984" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.90053960935323" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "13.284045060582633" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "13.253953210529641" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "32.294226433258174" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "31.202447450944113" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "27.857713140224813" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.017223618357678" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "4.690451238225076" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.650222000126365" .
+
+<http://example.org/dataset/police-records/bexley> a qb:Observation .
+
+<http://example.org/bexley> rdfs:label "Bexley" .
+
+<http://example.org/dataset/police-records/bexley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bexley> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "71.88676645136053" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "68.39964053777673" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "60.270138666502895" ;
+	<http://example.org/def/statistical-dimension/violence2008> "15.533404906184163" ;
+	<http://example.org/def/statistical-dimension/violence2009> "16.99733199634716" ;
+	<http://example.org/def/statistical-dimension/violence2010> "13.432357856964252" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.6211771533763472" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.7975919033156391" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.7676886430335546" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "1.7172164651829795" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.3061246780197875" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "1.3949999341981163" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "10.278121956683751" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "9.18827740369451" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "8.396320358664134" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "24.031053827548842" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "22.431917887592085" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "19.354527388937385" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.47913193161438" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "3.8676291568029395" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "4.268348855266563" .
+
+<http://example.org/dataset/police-records/brent> a qb:Observation .
+
+<http://example.org/brent> rdfs:label "Brent" .
+
+<http://example.org/dataset/police-records/brent> <http://example.org/def/statistical-dimension/area-name> <http://example.org/brent> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "106.94327640276347" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "113.69899477030032" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "114.95346045307848" ;
+	<http://example.org/def/statistical-dimension/violence2008> "25.222176846936197" ;
+	<http://example.org/def/statistical-dimension/violence2009> "27.499706032218867" ;
+	<http://example.org/def/statistical-dimension/violence2010> "27.643087668968956" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.1088059280551081" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.2149724981464878" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.3291445142580958" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "6.296501860074403" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "7.1088237989065695" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "7.877422473066309" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "13.115929721262903" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "13.834285290408722" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "14.129468809928436" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "29.41742625828002" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "32.55646000837441" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "32.5231138620808" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "12.048800748392004" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "11.578476557182583" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "14.554327320351113" .
+
+<http://example.org/dataset/police-records/bromley> a qb:Observation .
+
+<http://example.org/bromley> rdfs:label "Bromley" .
+
+<http://example.org/dataset/police-records/bromley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bromley> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "85.54500446392338" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "76.67283548597185" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "70.52628209232346" ;
+	<http://example.org/def/statistical-dimension/violence2008> "18.342134267712908" ;
+	<http://example.org/def/statistical-dimension/violence2009> "17.478364716082908" ;
+	<http://example.org/def/statistical-dimension/violence2010> "15.506754593764006" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.7516661933953598" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9267533843047694" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.7714962545617517" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "2.657051950410666" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.996549587122925" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "2.0872014853703824" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.288489995496366" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.143083809896766" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "9.60048658684935" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "31.640576058946824" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "25.77805508270544" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "24.418976887124657" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "3.9618707179028894" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "4.211288226488345" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.4605288430757413" .
+
+<http://example.org/dataset/police-records/camden> a qb:Observation .
+
+<http://example.org/camden> rdfs:label "Camden" .
+
+<http://example.org/dataset/police-records/camden> <http://example.org/def/statistical-dimension/area-name> <http://example.org/camden> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "150.90698742404973" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "146.05930077672255" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "145.32932249046152" ;
+	<http://example.org/def/statistical-dimension/violence2008> "27.15724923346474" ;
+	<http://example.org/def/statistical-dimension/violence2009> "25.977215789074116" ;
+	<http://example.org/def/statistical-dimension/violence2010> "24.965797367459487" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.9258084375455268" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.3965457242806645" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.4828222057936287" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.862181466336686" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "5.338326682487496" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "5.37045062499469" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "17.82091408647425" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "16.206983368465743" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "14.22489611747011" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "76.314904115734" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "85.19865475808277" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "73.22762383052489" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "20.43077712046008" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "14.68947983978397" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "10.022858405350057" .
+
+<http://example.org/dataset/police-records/croydon> a qb:Observation .
+
+<http://example.org/croydon> rdfs:label "Croydon" .
+
+<http://example.org/dataset/police-records/croydon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/croydon> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "96.10638559796467" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "96.87412489498739" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "93.4477749289563" ;
+	<http://example.org/def/statistical-dimension/violence2008> "20.571574472127878" ;
+	<http://example.org/def/statistical-dimension/violence2009> "20.887319573921136" ;
+	<http://example.org/def/statistical-dimension/violence2010> "19.183243527934206" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.1861899995518175" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.344334420326575" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.3658909255068554" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.203701767227858" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.849953624749424" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.803768932926652" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.087086862473486" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.312301558881806" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.591083510339677" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "30.331407577167376" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "32.25563592779749" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "31.456005000549826" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "9.05860821146887" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "7.564781607011376" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "6.652930588432756" .
+
+<http://example.org/dataset/police-records/ealing> a qb:Observation .
+
+<http://example.org/ealing> rdfs:label "Ealing" .
+
+<http://example.org/dataset/police-records/ealing> <http://example.org/def/statistical-dimension/area-name> <http://example.org/ealing> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "104.91159387324237" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "106.28809651643876" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "109.97877657637294" ;
+	<http://example.org/def/statistical-dimension/violence2008> "24.788027013175736" ;
+	<http://example.org/def/statistical-dimension/violence2009> "26.03873455891393" ;
+	<http://example.org/def/statistical-dimension/violence2010> "25.464968792776503" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.024984821084656" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.0997449112395232" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.1836140099712416" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.399993505544641" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.73262005832316" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "5.026435092742594" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.71478792259421" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.353714575821085" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.033932361325647" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "33.62026480927818" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "35.87734737900824" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "38.51297893983348" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "9.975792597220053" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "8.294031022335822" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "7.798666315035979" .
+
+<http://example.org/dataset/police-records/enfield> a qb:Observation .
+
+<http://example.org/enfield> rdfs:label "Enfield" .
+
+<http://example.org/dataset/police-records/enfield> <http://example.org/def/statistical-dimension/area-name> <http://example.org/enfield> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "84.89250455899705" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "83.98516636335543" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "80.2130696748687" ;
+	<http://example.org/def/statistical-dimension/violence2008> "14.839694870375949" ;
+	<http://example.org/def/statistical-dimension/violence2009> "16.15899024606131" ;
+	<http://example.org/def/statistical-dimension/violence2010> "15.010494122274325" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.8950611802731357" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.2101753519387501" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.115530283765135" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.075418416755211" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.710039315497984" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.3400570310619235" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "14.487326770107755" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "14.195754257644284" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "11.945328844086841" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "28.727441941628978" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "27.528957104252907" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "26.454003872144632" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "7.5115548812758" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "6.171239641633803" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "5.767528913934635" .
+
+<http://example.org/dataset/police-records/greenwich> a qb:Observation .
+
+<http://example.org/greenwich> rdfs:label "Greenwich" .
+
+<http://example.org/dataset/police-records/greenwich> <http://example.org/def/statistical-dimension/area-name> <http://example.org/greenwich> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "128.17109144542775" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "113.30149464933227" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "105.59759134213533" ;
+	<http://example.org/def/statistical-dimension/violence2008> "30.147292334804916" ;
+	<http://example.org/def/statistical-dimension/violence2009> "27.410985865092147" ;
+	<http://example.org/def/statistical-dimension/violence2010> "23.810878346148293" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.4287130765555847" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.7825232108707043" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.864259175787387" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.893481427530954" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "3.8468509288627097" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "3.907942356756189" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "16.67614881690745" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "13.47374229743401" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "11.78071760849682" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "44.175938966041464" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "40.274687983107725" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "37.22391678227116" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "8.007918344313618" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "6.378344045909764" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "5.623410894100451" .
+
+<http://example.org/dataset/police-records/hackney> a qb:Observation .
+
+<http://example.org/hackney> rdfs:label "Hackney" .
+
+<http://example.org/dataset/police-records/hackney> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hackney> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "139.60514198725778" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "132.97559575344812" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "127.79389494042731" ;
+	<http://example.org/def/statistical-dimension/violence2008> "30.868118066731295" ;
+	<http://example.org/def/statistical-dimension/violence2009> "31.553190478452986" ;
+	<http://example.org/def/statistical-dimension/violence2010> "27.131570784753773" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "2.0207268843278197" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "2.2096640447876372" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.8884449066725053" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "5.2777897401298635" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "5.246499136773451" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.9263780174065355" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "13.53125414861762" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.37177074587688" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "11.508566423996934" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "52.28610342165689" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "53.81566852682496" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "55.47192876822304" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "22.40340508749982" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "16.857125119981664" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "11.549619574141989" .
+
+<http://example.org/dataset/police-records/hammersmith-and-fulham> a qb:Observation .
+
+<http://example.org/hammersmith-and-fulham> rdfs:label "Hammersmith and Fulham" .
+
+<http://example.org/dataset/police-records/hammersmith-and-fulham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hammersmith-and-fulham> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "135.9937365062042" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "134.72653465229868" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "142.31165846616187" ;
+	<http://example.org/def/statistical-dimension/violence2008> "29.28723908918406" ;
+	<http://example.org/def/statistical-dimension/violence2009> "27.901145496371903" ;
+	<http://example.org/def/statistical-dimension/violence2010> "28.832385610323797" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.3728298046084477" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.2835224113659753" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.4790371527061665" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "3.997307816112136" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.423864059205358" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.949765770012669" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "13.911784565036225" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "11.135121092965862" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "14.837512153442738" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "57.47203348074431" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "64.09601952264153" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "63.08594325447099" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "12.977180509386868" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "11.159867172675522" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "10.848236645944432" .
+
+<http://example.org/dataset/police-records/haringey> a qb:Observation .
+
+<http://example.org/haringey> rdfs:label "Haringey" .
+
+<http://example.org/dataset/police-records/haringey> <http://example.org/def/statistical-dimension/area-name> <http://example.org/haringey> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "121.52349332883558" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "114.1449658358792" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "109.28194279009405" ;
+	<http://example.org/def/statistical-dimension/violence2008> "23.565423773928085" ;
+	<http://example.org/def/statistical-dimension/violence2009> "22.714629663419387" ;
+	<http://example.org/def/statistical-dimension/violence2010> "21.742608757489023" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.235612501175175" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.546249342732628" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.6978079610304184" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "5.093750979137106" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.858572037415042" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.764529147184839" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "17.1757374513862" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "15.84173630853646" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "15.231381891233623" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "41.70210830357752" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "41.55857228482927" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "39.27625380006756" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "11.603554145463296" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "9.081028325532905" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "8.191256733453038" .
+
+<http://example.org/dataset/police-records/harrow> a qb:Observation .
+
+<http://example.org/harrow> rdfs:label "Harrow" .
+
+<http://example.org/dataset/police-records/harrow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/harrow> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "66.76872559460419" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "67.4711892936829" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "65.08387051904528" ;
+	<http://example.org/def/statistical-dimension/violence2008> "14.124536298612396" ;
+	<http://example.org/def/statistical-dimension/violence2009> "15.512902041218462" ;
+	<http://example.org/def/statistical-dimension/violence2010> "14.161707750687874" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.7502120164394286" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9371771310493641" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.7476408020620977" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "2.583771834525238" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "2.19682002069809" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "1.9299564890440195" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.137465688571783" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "10.740606730018472" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.449584233472574" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "24.13994280631617" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "24.082651544666177" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "21.78590523218159" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.493878633275731" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "4.4009271768549185" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.8946869688816252" .
+
+<http://example.org/dataset/police-records/havering> a qb:Observation .
+
+<http://example.org/havering> rdfs:label "Havering" .
+
+<http://example.org/dataset/police-records/havering> <http://example.org/def/statistical-dimension/area-name> <http://example.org/havering> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "77.56776418022238" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "73.26428190069407" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "74.45254238005904" ;
+	<http://example.org/def/statistical-dimension/violence2008> "13.69437616452496" ;
+	<http://example.org/def/statistical-dimension/violence2009> "14.722674481710627" ;
+	<http://example.org/def/statistical-dimension/violence2010> "15.668870189762721" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.788416478790268" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9691715345509653" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.9316625518237295" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "1.5153737107102703" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.536296105533774" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "1.7701588484650859" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.157452440914804" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.415616086010404" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "9.83750958130238" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "29.76801204578464" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "27.707875522790104" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "27.57721153398239" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.484621009876738" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "4.203224367329444" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "4.836175609921359" .
+
+<http://example.org/dataset/police-records/hillingdon> a qb:Observation .
+
+<http://example.org/hillingdon> rdfs:label "Hillingdon" .
+
+<http://example.org/dataset/police-records/hillingdon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hillingdon> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "98.50613241363276" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "92.04732447586542" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "88.439540948616" ;
+	<http://example.org/def/statistical-dimension/violence2008> "24.17391989287543" ;
+	<http://example.org/def/statistical-dimension/violence2009> "22.98729021013258" ;
+	<http://example.org/def/statistical-dimension/violence2010> "21.359267081025422" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.8957765941208133" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.183728107981426" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.086000736526451" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "3.1736265159733805" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "2.8076988148852347" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "3.2504866335480282" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.776980289616974" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "13.036609992834343" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.002374922025899" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "32.53616145678721" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "31.9889982983273" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "28.2285035736564" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "7.189757971296579" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "6.143909259186326" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "5.155685157488895" .
+
+<http://example.org/dataset/police-records/hounslow> a qb:Observation .
+
+<http://example.org/hounslow> rdfs:label "Hounslow" .
+
+<http://example.org/dataset/police-records/hounslow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hounslow> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "103.14185697037081" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "98.79357598422172" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "100.75603987159994" ;
+	<http://example.org/def/statistical-dimension/violence2008> "24.69839291278992" ;
+	<http://example.org/def/statistical-dimension/violence2009> "24.55908076614512" ;
+	<http://example.org/def/statistical-dimension/violence2010> "23.99476262882244" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.173902676131257" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.2684913079003084" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.2924480486568677" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "3.2275342377201324" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "2.9915263277506967" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "2.76651461395506" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.075573624674593" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.55232062821795" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.212873796249365" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "36.74364670215292" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "36.3465827959197" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "35.21287379624936" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "9.579140766421546" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "8.204603125139117" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "7.839162020611589" .
+
+<http://example.org/dataset/police-records/islington> a qb:Observation .
+
+<http://example.org/islington> rdfs:label "Islington" .
+
+<http://example.org/dataset/police-records/islington> <http://example.org/def/statistical-dimension/area-name> <http://example.org/islington> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "155.911068661785" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "148.22151902033667" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "144.66199505358614" ;
+	<http://example.org/def/statistical-dimension/violence2008> "31.12332198010396" ;
+	<http://example.org/def/statistical-dimension/violence2009> "31.309709221110772" ;
+	<http://example.org/def/statistical-dimension/violence2010> "30.471970321516903" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.4964047774923117" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.4462686809704624" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.5509068425391592" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "6.078218239091373" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "5.46381805651275" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "5.0082440230832646" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "16.95229741582889" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "15.898587969027856" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "13.855111294311623" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "67.64613273958123" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "70.43712332898923" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "67.15787304204451" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "18.276069399229737" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "12.587510727992099" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "9.470321516900247" .
+
+<http://example.org/dataset/police-records/kensington-and-chelsea> a qb:Observation .
+
+<http://example.org/kensington-and-chelsea> rdfs:label "Kensington and Chelsea" .
+
+<http://example.org/dataset/police-records/kensington-and-chelsea> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kensington-and-chelsea> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "128.49008511832383" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "122.92650192486549" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "124.96607549529777" ;
+	<http://example.org/def/statistical-dimension/violence2008> "18.556080993431372" ;
+	<http://example.org/def/statistical-dimension/violence2009> "17.422744345506242" ;
+	<http://example.org/def/statistical-dimension/violence2010> "17.428345546155025" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.020010200102001" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9139582055757347" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.9970854425525386" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "3.1021831080339837" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "3.3179300942292143" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "3.1446540880503147" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.993973917147827" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "9.771946806083884" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.478247017593542" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "70.52198033117593" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "74.27646636601254" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "66.54512844112476" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "17.253172319449032" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "13.001639208934279" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "13.209907135355824" .
+
+<http://example.org/dataset/police-records/kingston-upon-thames> a qb:Observation .
+
+<http://example.org/kingston-upon-thames> rdfs:label "Kingston upon Thames" .
+
+<http://example.org/dataset/police-records/kingston-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kingston-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "68.62989313032753" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "66.0421489486752" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "65.99390370216922" ;
+	<http://example.org/def/statistical-dimension/violence2008> "13.667269665024016" ;
+	<http://example.org/def/statistical-dimension/violence2009> "13.935693735098603" ;
+	<http://example.org/def/statistical-dimension/violence2010> "13.198780740433843" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.7291451579599422" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9449997463087929" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.0535349649314907" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "1.809157118337431" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.7405925896733598" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "1.4027403746559735" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "7.710686359687228" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "7.896943876010601" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "7.339232339972182" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "32.19347306689835" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "31.54044779901783" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "28.220532094344648" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.059059313004211" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "3.4620422930572015" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.2079547808588083" .
+
+<http://example.org/dataset/police-records/lambeth> a qb:Observation .
+
+<http://example.org/lambeth> rdfs:label "Lambeth" .
+
+<http://example.org/dataset/police-records/lambeth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lambeth> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "125.0537554155249" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "125.16635073264924" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "125.39193768366586" ;
+	<http://example.org/def/statistical-dimension/violence2008> "28.265247930006428" ;
+	<http://example.org/def/statistical-dimension/violence2009> "27.92011773931913" ;
+	<http://example.org/def/statistical-dimension/violence2010> "27.017336651621886" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.8041786394067891" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "2.0371200443137383" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.9052038075955062" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "8.010166042919211" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "8.926064403623627" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "9.652563940327049" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.887552401973128" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "13.58588297265265" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.025280859380493" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "43.35105989008547" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "46.27891026433848" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "46.98331013343457" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "15.382260656615902" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "12.311679311614343" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "10.657892886770433" .
+
+<http://example.org/dataset/police-records/lewisham> a qb:Observation .
+
+<http://example.org/lewisham> rdfs:label "Lewisham" .
+
+<http://example.org/dataset/police-records/lewisham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lewisham> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "120.4119950236985" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "111.7294569100773" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "108.3533473431402" ;
+	<http://example.org/def/statistical-dimension/violence2008> "34.28700561449717" ;
+	<http://example.org/def/statistical-dimension/violence2009> "29.525468371638556" ;
+	<http://example.org/def/statistical-dimension/violence2010> "25.720504353047133" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.471825063078217" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.4669445864632085" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.3959771840288202" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "5.432509843218634" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "5.186721991701245" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "6.079255478835185" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.59432936939224" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "11.85046552591847" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "12.346142299609728" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "37.05584159044212" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "34.912708241780194" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "33.98754127889523" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "10.854603374365832" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "10.328960441367272" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "9.37781447012909" .
+
+<http://example.org/dataset/police-records/merton> a qb:Observation .
+
+<http://example.org/merton> rdfs:label "Merton" .
+
+<http://example.org/dataset/police-records/merton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/merton> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "74.69804648777144" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "71.89295507174762" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "70.50489956607949" ;
+	<http://example.org/def/statistical-dimension/violence2008> "18.949861823924202" ;
+	<http://example.org/def/statistical-dimension/violence2009> "16.929474700869246" ;
+	<http://example.org/def/statistical-dimension/violence2010> "13.750395126296732" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.117440385854764" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.9488833950534965" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.0153548473615144" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "2.833038551237302" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "2.8923311458121237" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "2.624596492236367" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "10.090543901039343" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "9.989220641947401" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.843223464275795" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "25.080235499160448" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "27.46647069630718" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "25.925074475320173" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.6572222849112155" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "4.722281271827264" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "4.487676848951598" .
+
+<http://example.org/dataset/police-records/newham> a qb:Observation .
+
+<http://example.org/newham> rdfs:label "Newham" .
+
+<http://example.org/dataset/police-records/newham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/newham> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "138.27456901352673" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "142.02858895908992" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "143.09689993503358" ;
+	<http://example.org/def/statistical-dimension/violence2008> "29.661578746747544" ;
+	<http://example.org/def/statistical-dimension/violence2009> "30.96003446447508" ;
+	<http://example.org/def/statistical-dimension/violence2010> "29.176592094084725" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.3224784945584256" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.8944063645478904" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.953157535273442" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "6.744522546314233" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "9.012341259898262" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "9.499258716329896" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "12.792151974024598" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "14.510185998211787" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "14.963102397094834" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "50.35382114616052" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "50.021412207868885" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "53.84301444253802" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "11.10344034058221" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "10.830474485821773" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "12.010461261681465" .
+
+<http://example.org/dataset/police-records/redbridge> a qb:Observation .
+
+<http://example.org/redbridge> rdfs:label "Redbridge" .
+
+<http://example.org/dataset/police-records/redbridge> <http://example.org/def/statistical-dimension/area-name> <http://example.org/redbridge> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "92.52380374795318" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "89.76887335096289" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "90.64291814078321" ;
+	<http://example.org/def/statistical-dimension/violence2008> "16.293502593395562" ;
+	<http://example.org/def/statistical-dimension/violence2009> "16.571538758195143" ;
+	<http://example.org/def/statistical-dimension/violence2010> "15.282753113666862" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.0858854994067848" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.915641546239898" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.8428804329743698" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.238155685680357" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "3.7001540719892274" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "3.7559935083419282" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "14.153617823136058" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "14.126080539742778" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "13.449118487547182" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "35.49035302749846" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "35.970739655157935" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "33.999874307303855" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "8.738405191289463" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "9.213121052569678" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "8.155237873427454" .
+
+<http://example.org/dataset/police-records/richmond-upon-thames> a qb:Observation .
+
+<http://example.org/richmond-upon-thames> rdfs:label "Richmond upon Thames" .
+
+<http://example.org/dataset/police-records/richmond-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/richmond-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "63.49163951065761" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "61.01226701664885" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "61.460297506809134" ;
+	<http://example.org/def/statistical-dimension/violence2008> "10.848759024905775" ;
+	<http://example.org/def/statistical-dimension/violence2009> "12.029170739042177" ;
+	<http://example.org/def/statistical-dimension/violence2010> "11.198407710035617" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "0.6523878501055984" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "0.7405551985885889" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.7228158390949088" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "1.3015356984529345" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.2794612794612794" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "0.9009009009009009" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "10.877862595419847" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "9.58057724412114" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.758432851456107" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "26.97201017811705" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "26.038591982961186" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "23.55436832181018" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.165622992060813" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "3.294528709849616" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.1112507856693905" .
+
+<http://example.org/dataset/police-records/southwark> a qb:Observation .
+
+<http://example.org/southwark> rdfs:label "Southwark" .
+
+<http://example.org/dataset/police-records/southwark> <http://example.org/def/statistical-dimension/area-name> <http://example.org/southwark> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "138.73342943554084" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "129.70580924339444" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "126.29554662922718" ;
+	<http://example.org/def/statistical-dimension/violence2008> "32.66108945995839" ;
+	<http://example.org/def/statistical-dimension/violence2009> "31.7121326677966" ;
+	<http://example.org/def/statistical-dimension/violence2010> "26.832403733264584" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.5927539291128552" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.7673823938630466" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.7488790799920568" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "7.440823114343887" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "8.002268604303355" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "8.180016095261653" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "13.160497930565118" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "12.983421110037709" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "11.123846419152665" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "51.949542191939095" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "49.12589317054867" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "45.07718409565184" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "19.234384988530817" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "17.332317519852317" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "15.482108827658767" .
+
+<http://example.org/dataset/police-records/sutton> a qb:Observation .
+
+<http://example.org/sutton> rdfs:label "Sutton" .
+
+<http://example.org/dataset/police-records/sutton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/sutton> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "72.999134418477" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "67.80322342340469" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "63.89453899430984" ;
+	<http://example.org/def/statistical-dimension/violence2008> "14.242148800335615" ;
+	<http://example.org/def/statistical-dimension/violence2009> "14.13589664259119" ;
+	<http://example.org/def/statistical-dimension/violence2010> "11.704729781920236" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.0272943362203217" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.0559376184545404" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "0.9114549808182497" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "1.9023322813692394" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "1.8518924368274563" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "1.467597003012436" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "9.363659029836274" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "8.392988024975065" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "8.311233553902005" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "29.847355735933732" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "28.186759581881535" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "26.823553644532556" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "2.777928196241945" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "3.1679099861773707" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "3.012435953551842" .
+
+<http://example.org/dataset/police-records/tower-hamlets> a qb:Observation .
+
+<http://example.org/tower-hamlets> rdfs:label "Tower Hamlets" .
+
+<http://example.org/dataset/police-records/tower-hamlets> <http://example.org/def/statistical-dimension/area-name> <http://example.org/tower-hamlets> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "122.15227817745804" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "114.96602985964688" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "120.43918350876014" ;
+	<http://example.org/def/statistical-dimension/violence2008> "27.94404744364226" ;
+	<http://example.org/def/statistical-dimension/violence2009> "27.928805215180287" ;
+	<http://example.org/def/statistical-dimension/violence2010> "26.494770824225714" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.452837041684159" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.5695213894001252" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.597336651309816" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "5.155782772258126" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.4650326750517495" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.88448733900528" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "11.560722963684416" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "10.472922571982695" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "10.75259777381713" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "50.41773827821826" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "50.13255334432346" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "45.01546894441268" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "14.704920636403555" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "15.272764107853249" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "13.018293708175001" .
+
+<http://example.org/dataset/police-records/waltham-forest> a qb:Observation .
+
+<http://example.org/waltham-forest> rdfs:label "Waltham Forest" .
+
+<http://example.org/dataset/police-records/waltham-forest> <http://example.org/def/statistical-dimension/area-name> <http://example.org/waltham-forest> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "118.50406680305473" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "121.54903018442322" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "121.23973673204341" ;
+	<http://example.org/def/statistical-dimension/violence2008> "25.588396278051448" ;
+	<http://example.org/def/statistical-dimension/violence2009> "26.567718333955174" ;
+	<http://example.org/def/statistical-dimension/violence2010> "24.01549670915054" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.0435273960118114" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.4172141227673163" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.2767175152435668" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "6.687064315679905" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "7.491367458153158" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "7.664707565651897" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "15.029643554334466" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "15.188162961962028" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "15.765260076162805" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "39.083399609572695" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "41.48251355985108" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "45.35869158467058" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "10.734254065347285" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "9.879584017515052" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "7.827599110700214" .
+
+<http://example.org/dataset/police-records/wandsworth> a qb:Observation .
+
+<http://example.org/wandsworth> rdfs:label "Wandsworth" .
+
+<http://example.org/dataset/police-records/wandsworth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/wandsworth> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "88.43144166372929" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "88.85950436290432" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "85.3771402128644" ;
+	<http://example.org/def/statistical-dimension/violence2008> "18.15103453427284" ;
+	<http://example.org/def/statistical-dimension/violence2009> "18.528537129561855" ;
+	<http://example.org/def/statistical-dimension/violence2010> "16.807448182502572" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "1.2220003709643983" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "1.2078770841272009" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "1.236298838984163" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "4.247277831183499" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "4.715192181460141" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "4.441006443948697" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "10.792132837744449" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "10.914764740084346" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "11.06798262274928" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "37.95737686546256" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "37.324956475664216" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "34.75104809133417" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "4.867457059250684" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "6.121483526059878" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "4.102578270148563" .
+
+<http://example.org/dataset/police-records/westminster> a qb:Observation .
+
+<http://example.org/westminster> rdfs:label "Westminster" .
+
+<http://example.org/dataset/police-records/westminster> <http://example.org/def/statistical-dimension/area-name> <http://example.org/westminster> ;
+	qb:dataSet <http://example.org/dataset/police-records> ;
+	<http://example.org/def/statistical-dimension/offenses2008> "256.80212802192904" ;
+	<http://example.org/def/statistical-dimension/offenses2009> "256.67733115232573" ;
+	<http://example.org/def/statistical-dimension/offenses2010> "252.83668889661493" ;
+	<http://example.org/def/statistical-dimension/violence2008> "35.691528571964035" ;
+	<http://example.org/def/statistical-dimension/violence2009> "36.25879793979439" ;
+	<http://example.org/def/statistical-dimension/violence2010> "34.534119283163186" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2008> "2.4763357408819706" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2009> "2.1907909908524865" ;
+	<http://example.org/def/statistical-dimension/sexual_offenses2010> "2.1334429027466104" ;
+	<http://example.org/def/statistical-dimension/robbery2008> "8.831834468357735" ;
+	<http://example.org/def/statistical-dimension/robbery2009> "7.942264954698134" ;
+	<http://example.org/def/statistical-dimension/robbery2010> "7.644837068175353" ;
+	<http://example.org/def/statistical-dimension/burglary2008> "19.192988527977686" ;
+	<http://example.org/def/statistical-dimension/burglary2009> "17.3806982771764" ;
+	<http://example.org/def/statistical-dimension/burglary2010> "13.124624672081925" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2008> "188.11266401327376" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2009> "201.7565646583841" ;
+	<http://example.org/def/statistical-dimension/theft_and_handling2010> "147.55918328645026" ;
+	<http://example.org/def/statistical-dimension/drugs2008> "22.920029723012274" ;
+	<http://example.org/def/statistical-dimension/drugs2009> "21.169199501901186" ;
+	<http://example.org/def/statistical-dimension/drugs2010> "24.37656057397516" .

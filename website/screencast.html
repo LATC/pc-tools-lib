@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Linked Data Publication & Consumption Tool Library</title>
+<meta name="keywords" content="linked data, google refine, RDF Extension for Google Refine, Silk, Pubby, Fuseki"/>
+<meta name="description" content="" />
+<meta name="author" content="Anna Dabrowska"/>
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="tool.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css"/>
+<script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+</head>
+<body>
+
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="#">Data Publication & Consumption Tools Library</a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="categories.php">Tool Categories</a></li>
+			<li><a href="example.php">Example</a></li>
+			<li class="active"><a href="screencast.html">Screencast</a></li>
+			<li><a href="contact.html">About</a></li>
+			<li><a href="http://latc-project.eu" title="LATC" style="background: none; align:right; margin-left: 169px; margin-top: 10px;padding: 7px;"><img src="images/logo-latc.png"/></a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+
+		
+		<div class="post">
+			<h2 class="title">A complete example of how to create linked data</h2>
+			<div class="entry">
+	  <h3 class="title">Purpose and preliminaries</h3>
+		<p style="align: justify;">
+		This tutorial shows on a real estate example how to
+		create Linked Data. In three movies we
+		explain what data such business might use and how
+		their database can be enriched by Linked Data
+		solution. We also argue that this approach can deliver 
+		more relevant information to the client as shown in a real-world example. <br /> <br />
+	  In odert to freely follow the tutorial assume you already
+		know:
+	  </p> 
+
+	  <ul>
+	    <li>Linked Data principles</li>
+	    <li>What is RUI and URL?</li>
+	    <li>SPARQL syntax</li>
+	    <li>What is RDF?</li>
+	    <li>What are entities, their types and properties in DBpedia?</li>
+	    <li>What are prefixes and what they are used for?</li>
+	    <li>The basic knowledge about bash commands</li>
+	   </ul>
+	    
+	  
+	  <h3 class="title">Screencast structure</h3>
+	  <p>
+	  This tutorial is based on the following pipeline:  
+	  </p>
+	  <p>
+		<img
+		src="General pipeline.jpg"
+		alt="Pipeline" width="604"/><br /><br /> 
+	  </p>
+
+	
+	  <p>
+	  In this tutorial we work with statistical data. The first movie
+	  defines the problem and a solution we are going to
+	  apply. The second movie covers all actions performed in
+	  Google Refine and RDF Extension for Google Refine. In
+	  this movie we remove some metadata and make some small touch-ups,
+	  to prepare our data to the next step, which is -
+	  skeleton creation and transformation to RDF. This step is
+	  shown in the details in the second movie as well. The third movie is
+	  focused  on interlinking and publishing the data on the
+	  web. We show how Silk can be used to create ‘sameAs’
+	  links. Moreover, we show how to use Pubby to publish our
+	  newly created Linked Data on the Web 
+	  </p>
+<table>
+  <tr>
+    <td><div style="font-size: 17px;">Movie 1 - Definition of the use case</div>
+	<br/>
+	<iframe width="420" height="315" src="http://www.youtube.com/embed/5Cu7J91eeLQ" frameborder="0" allowfullscreen></iframe>
+	<br/>
+	<!-- <a href="http://www.youtube.com/watch?v=5Cu7J91eeLQ&feature=plcp">Watch on YouTube</a> -->
+	</td>
+	
+  </tr>
+  <tr>
+    <td><div style="font-size: 17px;">Movie 2 - Creating RDF</div>
+	<br/><iframe width="420" height="315" src="http://www.youtube.com/embed/B5CsSE7_zeQ" frameborder="0" allowfullscreen></iframe>
+	<!-- <a href="http://www.youtube.com/watch?v=B5CsSE7_zeQ&feature=plcp">Watch on YouTube</a> -->
+	</td>
+  </tr>
+  <tr>
+    <td><div style="font-size: 17px;">Movie 3 - Interlinking and publishing</div>
+	<br/><iframe width="420" height="315" src="http://www.youtube.com/embed/ucn2GMrAupQ" frameborder="0" allowfullscreen></iframe>
+	<!-- <a href="http://www.youtube.com/watch?v=ucn2GMrAupQ&feature=plcp">Watch on YouTube</a> -->
+	</td>
+  </tr>
+</table>
+
+<h3 style="color: #3E578D">Slides used in a movie</h3>
+<div style="width:425px" id="__ss_13442363"><object id="__sse13442363" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=moviesupportslides-120625031614-phpapp01&stripped_title=a-complete-example-of-how-to-create-linked-data-13442363&userName=Ankadab" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><param name="wmode" value="transparent"/><embed name="__sse13442363" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=moviesupportslides-120625031614-phpapp01&stripped_title=a-complete-example-of-how-to-create-linked-data-13442363&userName=Ankadab" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" width="425" height="355"></embed></object></div>
+
+<p>
+<ul>
+  <li>Slide 1 - Movie 1 (00:00)</li>
+  <li>Slide 2 - Movie 1 (00:10)</li>
+  <li>Slide 3 - Movie 1 (00:26)</li>
+  <li>Slide 4 - Movie 1 (01:15)</li>
+  <li>Slide 5 - Movie 1 (03:06)</li>
+  <li>Slide 6 - Movie 1 (03:09)</li>
+  <li>Slide 7 - Movie 1 (03:11)</li>
+  <li>Slide 8 - Movie 1 (03:22) and Movie 3 (01:58)</li>
+  <li>Slide 9 - Movie 1 (03:45) and Movie 2 (00:00)</li>
+  <li>Slide 10 - Movie 2 (00:25)</li>
+  <li>Slide 11 - Movie 2 (00:58)</li>
+  <li>Slide 12 - Movie 2 (02:!5)</li>
+  <li>Slide 13 - Movie 2 (06:54)</li>
+  <li>Slide 14 - Movie 2 (07:11)</li>
+  <li>Slide 15 - Movie 2 (11:07)</li>
+  <li>Slide 16 - Movie 2 (11:25)</li>
+  <li>Slide 17 - Movie 2 (12:08)</li>
+  <li>Slide 18 - Movie 2 (15:03)</li>
+  <li>Slide 19 - Movie 2 (12:12)</li>
+  <li>Slide 20 - Movie 2 (12:16)</li>
+  <li>Slide 21 - Movie 2 (13:06)</li>
+  <li>Slide 22 - Movie 3 (00:00) and Movie 3 (12:11)</li>
+  <li>Slide 23 - Movie 3 (02:20)</li>
+  <li>Slide 24 - Movie 3 (3:55) and Movie 3 (4:50)</li>
+  <li>Slide 25 - Movie 3 (12:20)</li>
+
+</ul>
+</p>
+
+	  <h3 class="title">Resources</h3>
+
+	  <h4>Datasets we downloaded</h4>
+		<p style="align: justify;">
+		<ul>
+			<li><a
+			href="http://data.london.gov.uk/datastore/package/london-borough-profiles">London
+			borough profiles</a> </li>
+			<li><a
+			href="http://data.london.gov.uk/datastore/package/crime-rates-borough">Crime rates in boroughs</a> </li>
+			<li><a
+			href="http://data.london.gov.uk/datastore/package/total-energy-consumption-borough">Total energy consumption in boroughs</a>
+			</li> 
+		</ul>
+		</p>
+      <h4>Links to tools and tutorials</h4> 
+		<p>
+		<ul>
+		<li><a
+			href="http://code.google.com/p/google-refine/wiki/Downloads?tm=2">Google
+		Refine</a></li>
+		<li> Tutorials about Google Refine:
+			<a
+			href="http://www.youtube.com/watch?v=yNccGtn3Wb0">[1]</a> </li>
+			<a
+			href="http://www.youtube.com/watch?v=cO8NVCs_Ba0&feature=relmfu">[2]</a> </li>
+			<a
+			href="http://www.youtube.com/watch?v=5tsyz3ibYzk">[3]</a>
+
+		</li>
+		<li><a
+			href="http://lab.linkeddata.deri.ie/2010/grefine-rdf-extension/">RDF Extension for Google Refine</a></li>
+
+		<li><a
+			href="http://csarven.ca/how-to-create-a-linked-data-site">Tutorial of how to set up Fuseki server</a></li>
+		<li><a
+			href="http://www.assembla.com/spaces/silk/tabs/aG7EfY8cOr4l_LacwqjQXA">Silk Link Discovery Framework</a></li>
+		<li><a
+			href="http://www4.wiwiss.fu-berlin.de/pubby/">Pubby</a></li>
+		</ul>
+		</p>
+		
+		
+	<h4>Data cube vocabulary</h4> 	
+		<p> 
+		<ul>
+		  <li><a
+			href="http://www.w3.org/TR/vocab-data-cube/">Data
+		Cube Vocabulary</a></li>
+		<li><a
+			href="http://lab.linkeddata.deri.ie/2010/grefine-rdf-extension/qbExport">qb
+  	dataset specification (in JSON)</a></li>
+      </ul>
+	</p>	
+
+
+<h4>Google Refine Projects</h4>
+      <ul>
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Google%20Refine%20projects/london-borough-profiles-xls-1.google-refine.tar">London Boroughs</a></li>
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Google%20Refine%20projects/police-recorded-offences-rates-borough-xls-4.google-refine.tar">Police Records</a></li>
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Google%20Refine%20projects/total-energy-consumption-xls-3.google-refine.tar">Energy
+	Data</a></li>
+      </ul>
+
+<h4>Data Uploaded to Fuseki</h4>
+Download all below files as a zip archive <a href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki.zip">HERE</a>
+        <ul>
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/borough_crime_links.nt">Borrough
+	Crime Links</a></li>
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/borough_energy_links.nt">Borrough
+	Energy Links</a></li>
+		<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/crime_energy_links.nt">Crime
+	Energy Links</a></li>
+
+	<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/crime_data.ttl">Crime
+	Data</a></li>
+		<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/energy.ttl">Energy
+	Data</a></li>
+
+		<li><a
+	href="https://github.com/LATC/pc-tools-lib/blob/master/screencast/Data%20uploaded%20to%20fuseki/london_boroughs.ttl">London
+	Borroughs Data</a></li>
+	
+      </ul>
+
+      <br/>
+<h4>Final SPARQL query</h4>
+
+<p>
+	<code class="prettyprint"> 
+PREFIX qb:  &lt;http://purl.org/linked-data/cube#&gt;<br />
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;<br />
+<br />
+select distinct ?description ?Hackney  ?Inslington ?Haringey ?Tower_hamlets <br />
+from &lt;http://data/london_boroughs&gt;<br />
+from &lt;http://data/energy&gt;<br />
+from &lt;http://data/crime_data&gt;<br />
+<br />
+where {<br />
+{ &lt;http://example.org/dataset/london-boroughs/hackney&gt; ?p ?Hackney. <br />
+&lt;http://example.org/dataset/london-boroughs/islington&gt; ?p ?Inslington. <br />
+&lt;http://example.org/dataset/london-boroughs/haringey&gt; ?p ?Haringey. <br />
+&lt;http://example.org/dataset/london-boroughs/tower-hamlets&gt; ?p ?Tower_hamlets. <br />
+?p rdfs:label ?description. <br />
+} <br />
+UNION <br />
+{ &lt;http://example.org/dataset/energy_consumption/hackney&gt; ?p ?Hackney. <br />
+&lt;http://example.org/dataset/energy_consumption/islington&gt; ?p ?Inslington. <br />
+&lt;http://example.org/dataset/energy_consumption/haringey&gt; ?p ?Haringey. <br />
+&lt;http://example.org/dataset/energy_consumption/tower-hamlets&gt; ?p ?Tower_hamlets. <br />
+?p rdfs:label ?description. <br />
+} <br />
+UNION <br />
+{&lt;http://example.org/dataset/police-records/hackney&gt; ?p ?Hackney. <br />
+&lt;http://example.org/dataset/police-records/islington&gt; ?p ?Inslington. <br />
+&lt;http://example.org/dataset/police-records/haringey&gt; ?p ?Haringey. <br />
+&lt;http://example.org/dataset/police-records/tower-hamlets&gt; ?p ?Tower_hamlets. <br />
+?p rdfs:label ?description. <br />
+}<br />
+FILTER (<br />
+?description = "Largest migrant population by country of birth" || <br />
+?description =  "Second Largest Migrant Population by Country" ||<br />
+?description =  "Third Largest Migrant Population by Country of Birth" ||<br />
+?description =  "Percentage of resident population born abroad" ||<br />
+?description =  "New Homes (net)" ||<br />
+?description =  "Homes Owned outright" ||<br />
+?description =  "Rented from Housing association" ||<br />
+?description =  "Rented from Private landlord" ||<br />
+?description =  "Population density" ||<br />
+?description =  "Average Band D Council Tax charge (£)" ||<br />
+?description =  "Achievement of 5 or more A*- C grades at GCSE or equivalent including English and Maths" ||<br />
+?description =  "Robbery 2008"||<br />
+?description =  "Robbery 2009" ||<br />
+?description =  "Robbery 2010"||<br />
+?description =  "Burglary 2008"||<br />
+?description =  "Burglary 2009" ||<br />
+?description =  "Burglary 2010"||<br />
+?description =  "Drugs 2008"||<br />
+?description =  "Drugs 2009" ||<br />
+?description =  "Drugs 2010" ||<br />
+?description =  "Petroleum transport" ||<br />
+?description =  "Petroleum industry" ||<br />
+?description =  "Natural gas domestic" ||<br />
+?description =  "Natural gas industry" <br />
+)}<br />
+ORDER BY ?description <br />
+</code>
+
+</p>
+		</div>
+		</div>
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li id="search">
+				<h2><b>Search</b></h2>
+				<form method="get" action="">
+					<fieldset>
+					<input type="text" id="s" name="s" value="" />
+					<input type="submit" id="x" value="Search" />
+					</fieldset>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+	<div class="wrap">
+		<div id="fbox1" class="box2">
+			<h2></h2>
+			<p></p>
+		</div>
+		<div id="fbox2" class="box2">
+			<h2></h2>
+			<p></p>
+		</div>
+		<div id="fbox3" class="box2">
+			<h2></h2>
+			<p></p>
+		</div>
+	</div>
+</div>
+<!-- end footer -->
+</body>
+</html>

@@ -1,0 +1,664 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+
+
+<http://example.org/dataset/energy_consumption> a qb:DataSet ;
+	rdfs:label "Energy consumption data grouped by London Boroughs" .
+
+_:node1704m8i61x1 a qb:DataStructureDefinition .
+
+_:node1704m8i61x2 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/area-name> a qb:DimensionProperty ;
+	rdfs:label "Area " ;
+	<http://example.org/year> "2009" .
+
+_:node1704m8i61x2 qb:dimension <http://example.org/def/statistical-dimension/area-name> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x2 .
+
+_:node1704m8i61x3 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/petroleum_industry> a qb:MeasureProperty ;
+	rdfs:label "Petroleum industry" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x3 qb:measure <http://example.org/def/statistical-dimension/petroleum_industry> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x3 .
+
+_:node1704m8i61x4 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/petroleum_domestic> a qb:MeasureProperty ;
+	rdfs:label "Petroleum domestic" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x4 qb:measure <http://example.org/def/statistical-dimension/petroleum_domestic> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x4 .
+
+_:node1704m8i61x5 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/petroleum_transport> a qb:MeasureProperty ;
+	rdfs:label "Petroleum transport" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x5 qb:measure <http://example.org/def/statistical-dimension/petroleum_transport> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x5 .
+
+_:node1704m8i61x6 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/petroleum_total> a qb:MeasureProperty ;
+	rdfs:label "Petroleum total" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x6 qb:measure <http://example.org/def/statistical-dimension/petroleum_total> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x6 .
+
+_:node1704m8i61x7 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/gas_industry> a qb:MeasureProperty ;
+	rdfs:label "Natural gas industry" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x7 qb:measure <http://example.org/def/statistical-dimension/gas_industry> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x7 .
+
+_:node1704m8i61x8 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/gas_domestic> a qb:MeasureProperty ;
+	rdfs:label "Natural gas domestic" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x8 qb:measure <http://example.org/def/statistical-dimension/gas_domestic> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x8 .
+
+_:node1704m8i61x9 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/gas_total> a qb:MeasureProperty ;
+	rdfs:label "Natural gas total" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x9 qb:measure <http://example.org/def/statistical-dimension/gas_total> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x9 .
+
+_:node1704m8i61x10 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/electricity_industry> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Electricity industry" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x10 qb:measure <http://example.org/def/statistical-dimension/electricity_industry> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x10 .
+
+_:node1704m8i61x11 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/electricity_domestic> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Electricity domestic" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x11 qb:measure <http://example.org/def/statistical-dimension/electricity_domestic> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x11 .
+
+_:node1704m8i61x12 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/electricity_total> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Electricity total" ;
+	rdfs:domain qb:Observation ;
+	rdfs:range xsd:int .
+
+_:node1704m8i61x12 qb:measure <http://example.org/def/statistical-dimension/electricity_total> .
+
+_:node1704m8i61x1 qb:component _:node1704m8i61x12 .
+
+<http://example.org/dataset/energy_consumption> qb:structure _:node1704m8i61x1 ;
+	void:vocabulary "http://purl.org/linked-data/cube#" .
+
+<http://example.org/dataset/energy_consumption/city-of-london> a qb:Observation .
+
+<http://example.org/city-of-london> rdfs:label "City of London" .
+
+<http://example.org/dataset/energy_consumption/city-of-london> <http://example.org/def/statistical-dimension/area-name> <http://example.org/city-of-london> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "1.1210232029356149" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.02698609928015391" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "16.73177275008552" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "17.885677005251537" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "77.79165227858985" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "3.041660447119518" ;
+	<http://example.org/def/statistical-dimension/gas_total> "80.83331272570936" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "209.9158187704213" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "212.12702624247635" .
+
+<http://example.org/dataset/energy_consumption/barking-and-dagenham> a qb:Observation .
+
+<http://example.org/barking-and-dagenham> rdfs:label "Barking and Dagenham" .
+
+<http://example.org/dataset/energy_consumption/barking-and-dagenham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barking-and-dagenham> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "9.373714066727972" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.3445856045404755" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "46.796083329565946" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "56.73559197488657" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "19.230854514187445" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "70.76076216680997" ;
+	<http://example.org/def/statistical-dimension/gas_total> "89.99161668099741" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "37.95406562338778" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "62.10151154772139" .
+
+<http://example.org/dataset/energy_consumption/barnet> a qb:Observation .
+
+<http://example.org/barnet> rdfs:label "Barnet" .
+
+<http://example.org/dataset/energy_consumption/barnet> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barnet> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "4.454767921621057" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.6851627270561017" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "115.21343618171227" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "122.73862553559538" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "51.29189810834049" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "205.99330739466896" ;
+	<http://example.org/def/statistical-dimension/gas_total> "257.2852055030094" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "47.631422923473764" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "102.95400148753218" .
+
+<http://example.org/dataset/energy_consumption/bexley> a qb:Observation .
+
+<http://example.org/bexley> rdfs:label "Bexley" .
+
+<http://example.org/dataset/energy_consumption/bexley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bexley> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "12.91093059495563" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5289367729565945" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "66.74398974796989" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "80.36648954761725" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "62.21558684436801" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "118.68217300085983" ;
+	<http://example.org/def/statistical-dimension/gas_total> "180.89775984522785" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "34.79788943250217" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "69.36101084264837" .
+
+<http://example.org/dataset/energy_consumption/brent> a qb:Observation .
+
+<http://example.org/brent> rdfs:label "Brent" .
+
+<http://example.org/dataset/energy_consumption/brent> <http://example.org/def/statistical-dimension/area-name> <http://example.org/brent> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "7.5786205187200615" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.581265952535554" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "62.82208012949508" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "73.19075356659621" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "42.6299992261393" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "147.8066984522786" ;
+	<http://example.org/def/statistical-dimension/gas_total> "190.4366976784179" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "68.88647279449698" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "107.16494228718827" .
+
+<http://example.org/dataset/energy_consumption/bromley> a qb:Observation .
+
+<http://example.org/bromley> rdfs:label "Bromley" .
+
+<http://example.org/dataset/energy_consumption/bromley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bromley> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "8.715367517544959" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.6300815492440479" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "90.58189354607637" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "100.17760905184527" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "36.299492175408425" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "192.55609733447977" ;
+	<http://example.org/def/statistical-dimension/gas_total> "228.8555895098882" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "40.51135043852106" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "90.91385682717109" .
+
+<http://example.org/dataset/energy_consumption/camden> a qb:Observation .
+
+<http://example.org/camden> rdfs:label "Camden" .
+
+<http://example.org/dataset/energy_consumption/camden> <http://example.org/def/statistical-dimension/area-name> <http://example.org/camden> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.223733283145395" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.3731441305767354" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "47.42176830239847" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "51.76456828035748" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "127.8812901977644" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "92.54183370593293" ;
+	<http://example.org/def/statistical-dimension/gas_total> "220.42312390369733" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "122.05226052450563" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "153.6187228202924" .
+
+<http://example.org/dataset/energy_consumption/croydon> a qb:Observation .
+
+<http://example.org/croydon> rdfs:label "Croydon" .
+
+<http://example.org/dataset/energy_consumption/croydon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/croydon> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "4.667390398908141" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.7433601009706525" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "89.08105002010869" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "94.77272473539044" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "42.00627205503009" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "192.42806251074808" ;
+	<http://example.org/def/statistical-dimension/gas_total> "234.43433456577816" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "61.9629786758384" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "114.68367944110067" .
+
+<http://example.org/dataset/energy_consumption/ealing> a qb:Observation .
+
+<http://example.org/ealing> rdfs:label "Ealing" .
+
+<http://example.org/dataset/energy_consumption/ealing> <http://example.org/def/statistical-dimension/area-name> <http://example.org/ealing> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "10.06184251483256" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5741439866361358" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "90.72370290056956" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "107.54426620959437" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "60.16402261392949" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "160.96314926913155" ;
+	<http://example.org/def/statistical-dimension/gas_total> "221.12717188306104" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "76.89726371453132" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "119.97744717110913" .
+
+<http://example.org/dataset/energy_consumption/enfield> a qb:Observation .
+
+<http://example.org/enfield> rdfs:label "Enfield" .
+
+<http://example.org/dataset/energy_consumption/enfield> <http://example.org/def/statistical-dimension/area-name> <http://example.org/enfield> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "8.32342933697827" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5732234812375777" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "119.24963832568412" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "128.17218926473146" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "50.661411521926055" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "149.16104729148753" ;
+	<http://example.org/def/statistical-dimension/gas_total> "199.82245881341356" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "46.34422242476352" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "91.4266558211522" .
+
+<http://example.org/dataset/energy_consumption/greenwich> a qb:Observation .
+
+<http://example.org/greenwich> rdfs:label "Greenwich" .
+
+<http://example.org/dataset/energy_consumption/greenwich> <http://example.org/def/statistical-dimension/area-name> <http://example.org/greenwich> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.99401234903974" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.44098452700762186" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "82.10345942322638" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "85.67519585951595" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "90.24368753224418" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "109.84870782459156" ;
+	<http://example.org/def/statistical-dimension/gas_total> "200.09239535683574" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "35.73310545471709" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "68.9861470712261" .
+
+<http://example.org/dataset/energy_consumption/hackney> a qb:Observation .
+
+<http://example.org/hackney> rdfs:label "Hackney" .
+
+<http://example.org/dataset/energy_consumption/hackney> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hackney> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.1910253427157267" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.415079124553512" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "48.84482157229077" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "51.595864824165844" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "22.59189140154772" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "95.52690137575236" ;
+	<http://example.org/def/statistical-dimension/gas_total> "118.11879277730007" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "37.1033993121238" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "66.72354392949265" .
+
+<http://example.org/dataset/energy_consumption/hammersmith-and-fulham> a qb:Observation .
+
+<http://example.org/hammersmith-and-fulham> rdfs:label "Hammersmith and Fulham" .
+
+<http://example.org/dataset/energy_consumption/hammersmith-and-fulham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hammersmith-and-fulham> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.6549830535112298" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.39178977686131083" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "50.617681164945004" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "56.279883012947366" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "51.116077987962164" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "86.39485202063628" ;
+	<http://example.org/def/statistical-dimension/gas_total> "137.51093000859845" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "65.27651392089426" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "90.67541901977646" .
+
+<http://example.org/dataset/energy_consumption/haringey> a qb:Observation .
+
+<http://example.org/haringey> rdfs:label "Haringey" .
+
+<http://example.org/dataset/energy_consumption/haringey> <http://example.org/def/statistical-dimension/area-name> <http://example.org/haringey> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "4.015981891731242" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.4841392871479241" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "51.74215371835891" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "56.65924838332369" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "29.472634479793633" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "124.5410536543422" ;
+	<http://example.org/def/statistical-dimension/gas_total> "154.01368813413583" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "35.84965422184008" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "68.92624049871024" .
+
+<http://example.org/dataset/energy_consumption/harrow> a qb:Observation .
+
+<http://example.org/harrow> rdfs:label "Harrow" .
+
+<http://example.org/dataset/energy_consumption/harrow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/harrow> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "4.342288109905394" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.45337478017368915" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "43.40347473934446" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "48.92662962579574" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "49.7537067927773" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "131.84579105760963" ;
+	<http://example.org/def/statistical-dimension/gas_total> "181.5994978503869" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "22.482453972484947" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "54.29379031814275" .
+
+<http://example.org/dataset/energy_consumption/havering> a qb:Observation .
+
+<http://example.org/havering> rdfs:label "Havering" .
+
+<http://example.org/dataset/energy_consumption/havering> <http://example.org/def/statistical-dimension/area-name> <http://example.org/havering> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "6.459162918096832" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.49593528078947857" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "120.78530199142189" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "128.06832686692758" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "18.489714445399827" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "129.86660361134994" ;
+	<http://example.org/def/statistical-dimension/gas_total> "148.35631805674979" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "34.94317201203782" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "71.70123668099741" .
+
+<http://example.org/dataset/energy_consumption/hillingdon> a qb:Observation .
+
+<http://example.org/hillingdon> rdfs:label "Hillingdon" .
+
+<http://example.org/dataset/energy_consumption/hillingdon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hillingdon> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "30.805920138299143" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.6462785869270714" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "154.4104354782976" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "189.8911541398977" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "127.96308254514186" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "135.92516629406705" ;
+	<http://example.org/def/statistical-dimension/gas_total> "263.8882488392089" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "103.62064340498715" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "141.49116771281174" .
+
+<http://example.org/dataset/energy_consumption/hounslow> a qb:Observation .
+
+<http://example.org/hounslow> rdfs:label "Hounslow" .
+
+<http://example.org/dataset/energy_consumption/hounslow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hounslow> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "7.144293671707573" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.48149516344761223" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "109.41068361500639" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "117.20466423266525" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "45.99470206362854" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "110.81143104041273" ;
+	<http://example.org/def/statistical-dimension/gas_total> "156.80613310404127" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "82.33368478933788" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "116.11941122098017" .
+
+<http://example.org/dataset/energy_consumption/islington> a qb:Observation .
+
+<http://example.org/islington> rdfs:label "Islington" .
+
+<http://example.org/dataset/energy_consumption/islington> <http://example.org/def/statistical-dimension/area-name> <http://example.org/islington> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.9161786597109813" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.40638838717177866" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "39.51812388625825" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "43.28670304374832" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "52.77016104901118" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "90.24541693895098" ;
+	<http://example.org/def/statistical-dimension/gas_total> "143.01557798796216" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "82.17528025795359" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "110.08810300085987" .
+
+<http://example.org/dataset/energy_consumption/kensington-and-chelsea> a qb:Observation .
+
+<http://example.org/kensington-and-chelsea> rdfs:label "Kensington and Chelsea" .
+
+<http://example.org/dataset/energy_consumption/kensington-and-chelsea> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kensington-and-chelsea> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "0.8990623481730872" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.31506388322951456" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "47.808963914788336" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "50.304981143727254" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "78.7593709372313" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "85.29074668959586" ;
+	<http://example.org/def/statistical-dimension/gas_total> "164.05011762682716" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "95.90936934651766" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "128.88765418744632" .
+
+<http://example.org/dataset/energy_consumption/kingston-upon-thames> a qb:Observation .
+
+<http://example.org/kingston-upon-thames> rdfs:label "Kingston upon Thames" .
+
+<http://example.org/dataset/energy_consumption/kingston-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kingston-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.1332246942811572" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.3039100890771151" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "63.82375218059437" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "67.5489722548499" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "23.394888306104903" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "83.9662939810834" ;
+	<http://example.org/def/statistical-dimension/gas_total> "107.36118228718831" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "28.346021272570937" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "52.61837820292348" .
+
+<http://example.org/dataset/energy_consumption/lambeth> a qb:Observation .
+
+<http://example.org/lambeth> rdfs:label "Lambeth" .
+
+<http://example.org/dataset/energy_consumption/lambeth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lambeth> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "1.7866513075866866" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5643847880350394" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "73.42638102940211" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "76.21904086844123" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "64.77934247635424" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "135.32820963026654" ;
+	<http://example.org/def/statistical-dimension/gas_total> "200.10755210662077" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "62.01106079105765" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "101.01481154772146" .
+
+<http://example.org/dataset/energy_consumption/lewisham> a qb:Observation .
+
+<http://example.org/lewisham> rdfs:label "Lewisham" .
+
+<http://example.org/dataset/energy_consumption/lewisham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lewisham> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.194426062444296" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5609379818040902" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "72.79887640369073" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "75.94902790510949" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "23.41067153912296" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "128.3815996560619" ;
+	<http://example.org/def/statistical-dimension/gas_total> "151.79227119518487" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "30.96161447979363" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "68.00826153912297" .
+
+<http://example.org/dataset/energy_consumption/merton> a qb:Observation .
+
+<http://example.org/merton> rdfs:label "Merton" .
+
+<http://example.org/dataset/energy_consumption/merton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/merton> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "4.745414794521826" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.4355641625297212" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "45.88700963256712" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "51.43121149418771" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "29.86569363714531" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "100.9435023215821" ;
+	<http://example.org/def/statistical-dimension/gas_total> "130.80919595872743" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "41.80868341358556" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "69.8934689939811" .
+
+<http://example.org/dataset/energy_consumption/newham> a qb:Observation .
+
+<http://example.org/newham> rdfs:label "Newham" .
+
+<http://example.org/dataset/energy_consumption/newham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/newham> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "10.890933271152559" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5212817697896586" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "83.26727147026979" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "95.041616374047" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "111.4358913155632" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "105.4185041272571" ;
+	<http://example.org/def/statistical-dimension/gas_total> "216.85439544282028" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "79.24103572656924" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "111.85699209802237" .
+
+<http://example.org/dataset/energy_consumption/redbridge> a qb:Observation .
+
+<http://example.org/redbridge> rdfs:label "Redbridge" .
+
+<http://example.org/dataset/energy_consumption/redbridge> <http://example.org/def/statistical-dimension/area-name> <http://example.org/redbridge> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.7935362714496765" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5392015147137321" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "74.35948474823516" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "78.81575391863126" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "24.702058813413583" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "136.80032209802235" ;
+	<http://example.org/def/statistical-dimension/gas_total> "161.50238091143592" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "24.958290197764416" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "61.364379140154774" .
+
+<http://example.org/dataset/energy_consumption/richmond-upon-thames> a qb:Observation .
+
+<http://example.org/richmond-upon-thames> rdfs:label "Richmond upon Thames" .
+
+<http://example.org/dataset/energy_consumption/richmond-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/richmond-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.7668986918671385" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.4151298268581229" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "58.21483289120958" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "62.46247653938694" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "33.799090111779876" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "113.49943293207222" ;
+	<http://example.org/def/statistical-dimension/gas_total> "147.2985230438521" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "33.00849261392951" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "63.36361092863287" .
+
+<http://example.org/dataset/energy_consumption/southwark> a qb:Observation .
+
+<http://example.org/southwark> rdfs:label "Southwark" .
+
+<http://example.org/dataset/energy_consumption/southwark> <http://example.org/def/statistical-dimension/area-name> <http://example.org/southwark> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.158061137309582" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5314363691400097" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "73.07841373578795" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "76.91708387304502" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "85.16340386930352" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "101.72946586414444" ;
+	<http://example.org/def/statistical-dimension/gas_total> "186.89286973344795" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "102.45129718830609" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "141.83824627687014" .
+
+<http://example.org/dataset/energy_consumption/sutton> a qb:Observation .
+
+<http://example.org/sutton> rdfs:label "Sutton" .
+
+<http://example.org/dataset/energy_consumption/sutton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/sutton> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.7931788388332923" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.39688968020011056" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "47.66070258442707" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "51.85484219866023" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "23.656513757523644" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "98.76707764402406" ;
+	<http://example.org/def/statistical-dimension/gas_total> "122.4235914015477" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "31.677634342218376" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "61.667409441100574" .
+
+<http://example.org/dataset/energy_consumption/tower-hamlets> a qb:Observation .
+
+<http://example.org/tower-hamlets> rdfs:label "Tower Hamlets" .
+
+<http://example.org/dataset/energy_consumption/tower-hamlets> <http://example.org/def/statistical-dimension/area-name> <http://example.org/tower-hamlets> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "3.17665297545663" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.43105094455745224" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "82.7155327868446" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "86.47550842304568" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "59.198206190885635" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "69.24127927773" ;
+	<http://example.org/def/statistical-dimension/gas_total> "128.43948546861566" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "226.8497098538262" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "260.7261206190884" .
+
+<http://example.org/dataset/energy_consumption/waltham-forest> a qb:Observation .
+
+<http://example.org/waltham-forest> rdfs:label "Waltham Forest" .
+
+<http://example.org/dataset/energy_consumption/waltham-forest> <http://example.org/def/statistical-dimension/area-name> <http://example.org/waltham-forest> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "5.64698173499594" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.48177377365103724" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "51.58617662403393" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "57.82345947824059" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "25.386792863284608" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "114.95551986242477" ;
+	<http://example.org/def/statistical-dimension/gas_total> "140.34231272570938" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "32.71342714531383" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "64.45120423903695" .
+
+<http://example.org/dataset/energy_consumption/wandsworth> a qb:Observation .
+
+<http://example.org/wandsworth> rdfs:label "Wandsworth" .
+
+<http://example.org/dataset/energy_consumption/wandsworth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/wandsworth> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "2.378057975057984" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.5365311339324139" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "70.52643297906963" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "74.11552035907259" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "56.873831900257954" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "146.24841109200344" ;
+	<http://example.org/def/statistical-dimension/gas_total> "203.1222429922614" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "42.5638304471195" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "86.30376734307829" .
+
+<http://example.org/dataset/energy_consumption/westminster> a qb:Observation .
+
+<http://example.org/westminster> rdfs:label "Westminster" .
+
+<http://example.org/dataset/energy_consumption/westminster> <http://example.org/def/statistical-dimension/area-name> <http://example.org/westminster> ;
+	qb:dataSet <http://example.org/dataset/energy_consumption> ;
+	<http://example.org/def/statistical-dimension/petroleum_industry> "5.794852326317575" ;
+	<http://example.org/def/statistical-dimension/petroleum_domestic> "0.4252201498246545" ;
+	<http://example.org/def/statistical-dimension/petroleum_transport> "88.0132361791624" ;
+	<http://example.org/def/statistical-dimension/petroleum_total> "95.43029620937126" ;
+	<http://example.org/def/statistical-dimension/gas_industry> "231.17325786758383" ;
+	<http://example.org/def/statistical-dimension/gas_domestic> "94.57362734307824" ;
+	<http://example.org/def/statistical-dimension/gas_total> "325.7468852106621" ;
+	<http://example.org/def/statistical-dimension/electricity_industry> "303.6295428030954" ;
+	<http://example.org/def/statistical-dimension/electricity_total> "346.97118572656916" .

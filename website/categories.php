@@ -24,6 +24,7 @@ require_once ('toollibrary.php');
 			<li><a href="index.php">Home</a></li>
 			<li class="active"><a href="#">Tool Categories</a></li>
 			<li><a href="example.php">Example</a></li>
+			<li><a href="screencast.html">Screencast</a></li>
 			<li><a href="contact.html">About</a></li>
 			<li><a href="http://latc-project.eu" title="LATC" style="background: none; align:right; margin-left: 169px; margin-top: 10px;padding: 7px;"><img src="images/logo-latc.png"/></a></li>
 		</ul>

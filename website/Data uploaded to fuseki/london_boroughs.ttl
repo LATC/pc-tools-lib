@@ -1,0 +1,1477 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+
+
+<http://example.org/dataset/london-boroughs> a qb:DataSet ;
+	rdfs:label "Census data grouped by London Boroughs" .
+
+_:node1704m6h67x1 a qb:DataStructureDefinition .
+
+_:node1704m6h67x2 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/area-name> a qb:DimensionProperty ;
+	rdfs:label "Area name" .
+
+_:node1704m6h67x2 qb:dimension <http://example.org/def/statistical-dimension/area-name> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x2 .
+
+_:node1704m6h67x3 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/population> a qb:MeasureProperty ;
+	rdfs:label "Population" ;
+	<http://example.org/year> "2012" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x3 qb:measure <http://example.org/def/statistical-dimension/population> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x3 .
+
+_:node1704m6h67x4 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/household> a qb:MeasureProperty ;
+	rdfs:label "Household" ;
+	<http://example.org/year> "2011" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x4 qb:measure <http://example.org/def/statistical-dimension/household> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x4 .
+
+_:node1704m6h67x5 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/inland-area> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Inland area" ;
+	qb:measure "hectares" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x5 qb:measure <http://example.org/def/statistical-dimension/inland-area> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x5 .
+
+_:node1704m6h67x6 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/population-density> a qb:MeasureProperty ;
+	rdfs:label "Population density" ;
+	<http://example.org/year> "2012" ;
+	qb:measure "hectares" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x6 qb:measure <http://example.org/def/statistical-dimension/population-density> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x6 .
+
+_:node1704m6h67x7 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/average-age> a qb:MeasureProperty ;
+	rdfs:label "Average age" ;
+	<http://example.org/year> "2012" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x7 qb:measure <http://example.org/def/statistical-dimension/average-age> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x7 .
+
+_:node1704m6h67x8 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/young-population> a qb:MeasureProperty ;
+	rdfs:label "Proportion of population aged 16-24" ;
+	<http://example.org/year> "2012" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x8 qb:measure <http://example.org/def/statistical-dimension/young-population> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x8 .
+
+_:node1704m6h67x9 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/working-age-population> a qb:MeasureProperty ;
+	rdfs:label "Proportion of population of working-age" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x9 qb:measure <http://example.org/def/statistical-dimension/working-age-population> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x9 .
+
+_:node1704m6h67x10 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/retired-population> a qb:MeasureProperty ;
+	rdfs:label "Proportion of population aged 65 and over" ;
+	<http://example.org/year> "2012" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x10 qb:measure <http://example.org/def/statistical-dimension/retired-population> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x10 .
+
+_:node1704m6h67x11 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/born-abroad> a qb:MeasureProperty ;
+	rdfs:label "Percentage of resident population born abroad" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x11 qb:measure <http://example.org/def/statistical-dimension/born-abroad> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x11 .
+
+_:node1704m6h67x12 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/largest-migrant-group> a qb:DimensionProperty ;
+	rdfs:label "Largest migrant population by country of birth" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x12 qb:dimension <http://example.org/def/statistical-dimension/largest-migrant-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x12 .
+
+_:node1704m6h67x13 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Percentage of largest migrant population" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x13 qb:measure <http://example.org/def/statistical-dimension/percentage-larg-migrant-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x13 .
+
+_:node1704m6h67x14 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/second-largest-migrant-group> a qb:DimensionProperty ;
+	rdfs:label "Second Largest Migrant Population by Country" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x14 qb:dimension <http://example.org/def/statistical-dimension/second-largest-migrant-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x14 .
+
+_:node1704m6h67x15 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Percentage of Second Largest Migrant Population" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x15 qb:measure <http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x15 .
+
+_:node1704m6h67x16 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/third-largest-migrant-group> a qb:DimensionProperty ;
+	rdfs:label "Third Largest Migrant Population by Country of Birth" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x16 qb:dimension <http://example.org/def/statistical-dimension/third-largest-migrant-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x16 .
+
+_:node1704m6h67x17 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Percentage of Third Largest Migrant Population" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x17 qb:measure <http://example.org/def/statistical-dimension/perc-third-larg-mig-group> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x17 .
+
+_:node1704m6h67x18 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/unemployment> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Unemployment rate" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x18 qb:measure <http://example.org/def/statistical-dimension/unemployment> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x18 .
+
+_:node1704m6h67x19 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Proportion of the working-age population who claim out of work benefits" ;
+	<http://example.org/year> "2011" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x19 qb:measure <http://example.org/def/statistical-dimension/claim-out-of-work-benefits> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x19 .
+
+_:node1704m6h67x20 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/highly-qualified> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Proportion of working age people in London with Level 4+ qualifications" ;
+	<http://example.org/year> "2010" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x20 qb:measure <http://example.org/def/statistical-dimension/highly-qualified> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x20 .
+
+_:node1704m6h67x21 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/median-property-price> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Median House Price" ;
+	<http://example.org/year> "2010" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x21 qb:measure <http://example.org/def/statistical-dimension/median-property-price> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x21 .
+
+_:node1704m6h67x22 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/band-D-council-tax> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Average Band D Council Tax charge (£)" ;
+	<http://example.org/year> "2011" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x22 qb:measure <http://example.org/def/statistical-dimension/band-D-council-tax> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x22 .
+
+_:node1704m6h67x23 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/new-homes> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "New Homes (net)" ;
+	<http://example.org/year> "2011" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x23 qb:measure <http://example.org/def/statistical-dimension/new-homes> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x23 .
+
+_:node1704m6h67x24 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/homes-owned> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Homes Owned outright" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x24 qb:measure <http://example.org/def/statistical-dimension/homes-owned> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x24 .
+
+_:node1704m6h67x25 a qb:ComponentSpecification .
+
+<http://example.org/http%3A%2F%2Fexample.org%2Fdef%2Fstatistical-dimension%2Fhomes-bought-by-mortgage+> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Houses being bought with mortgage or loan" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x25 qb:measure <http://example.org/http%3A%2F%2Fexample.org%2Fdef%2Fstatistical-dimension%2Fhomes-bought-by-mortgage+> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x25 .
+
+_:node1704m6h67x26 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Homes rented from Local Authority" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x26 qb:measure <http://example.org/def/statistical-dimension/homes-rented-from-local-authority> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x26 .
+
+_:node1704m6h67x27 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Rented from Housing association" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x27 qb:measure <http://example.org/def/statistical-dimension/homes-rented-from-housing-association> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x27 .
+
+_:node1704m6h67x28 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/homes-rented-private> a qb:MeasureProperty , rdf:Property ;
+	rdfs:label "Rented from Private landlord" ;
+	<http://example.org/year> "2009" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x28 qb:measure <http://example.org/def/statistical-dimension/homes-rented-private> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x28 .
+
+_:node1704m6h67x29 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/high-GCSE> a qb:MeasureProperty ;
+	rdfs:label "Achievement of 5 or more A*- C grades at GCSE or equivalent including English and Maths" ;
+	<http://example.org/year> "2010" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x29 qb:measure <http://example.org/def/statistical-dimension/high-GCSE> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x29 .
+
+_:node1704m6h67x30 a qb:ComponentSpecification .
+
+<http://example.org/def/statistical-dimension/pupils-other-lang> a qb:MeasureProperty ;
+	rdfs:label "% of pupils whose first language is not English" ;
+	<http://example.org/year> "2011" ;
+	rdfs:domain qb:Observation .
+
+_:node1704m6h67x30 qb:measure <http://example.org/def/statistical-dimension/pupils-other-lang> .
+
+_:node1704m6h67x1 qb:component _:node1704m6h67x30 .
+
+<http://example.org/dataset/london-boroughs> qb:structure _:node1704m6h67x1 ;
+	void:vocabulary <http://purl.org/linked-data/cube#> .
+
+<http://example.org/dataset/london-boroughs/city-of-london> a qb:Observation .
+
+<http://example.org/city-of-london> rdfs:label "City of London" .
+
+<http://example.org/dataset/london-boroughs/city-of-london> <http://example.org/def/statistical-dimension/area-name> <http://example.org/city-of-london> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "9000" ;
+	<http://example.org/def/statistical-dimension/household> "5300" ;
+	<http://example.org/def/statistical-dimension/inland-area> "290.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "30.991735537190085" ;
+	<http://example.org/def/statistical-dimension/average-age> "39.63112781812056" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.11111111111111" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "76.66666666666667" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.222222222222221" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "3.2" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "440000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "939.18" ;
+	<http://example.org/def/statistical-dimension/new-homes> "100" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "33.4" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "25.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "0" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "0" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "19.3" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "54.5" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "72.51461988304094" .
+
+<http://example.org/dataset/london-boroughs/barking-and-dagenham> a qb:Observation .
+
+<http://example.org/barking-and-dagenham> rdfs:label "Barking and Dagenham" .
+
+<http://example.org/dataset/london-boroughs/barking-and-dagenham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barking-and-dagenham> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "185200" ;
+	<http://example.org/def/statistical-dimension/household> "73700" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3610.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "51.290572726265644" ;
+	<http://example.org/def/statistical-dimension/average-age> "34.730478824673554" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.609071274298056" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "63.01295896328294" ;
+	<http://example.org/def/statistical-dimension/retired-population> "11.393088552915767" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "31.1" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3.4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.1" ;
+	<http://example.org/def/statistical-dimension/unemployment> "12.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "17.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "26.7" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "171000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1326.22" ;
+	<http://example.org/def/statistical-dimension/new-homes> "230" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "19" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "33.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "29.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "3.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "14.1" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "52.1" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "37.96312252283302" .
+
+<http://example.org/dataset/london-boroughs/barnet> a qb:Observation .
+
+<http://example.org/barnet> rdfs:label "Barnet" .
+
+<http://example.org/dataset/london-boroughs/barnet> <http://example.org/def/statistical-dimension/area-name> <http://example.org/barnet> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "348800" ;
+	<http://example.org/def/statistical-dimension/household> "134100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "8674.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "40.208419790658" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.583580513394445" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.553899082568806" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "66.08371559633028" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.52866972477064" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "32.9" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.7" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Iran" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Poland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.3" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "9.5" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "47.7" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "326000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1423.02" ;
+	<http://example.org/def/statistical-dimension/new-homes> "660" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "28.3" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "33.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "9.7" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "5.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "20.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "68.3" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "41.6500410749912" .
+
+<http://example.org/dataset/london-boroughs/bexley> a qb:Observation .
+
+<http://example.org/bexley> rdfs:label "Bexley" .
+
+<http://example.org/dataset/london-boroughs/bexley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bexley> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "224600" ;
+	<http://example.org/def/statistical-dimension/household> "91900" ;
+	<http://example.org/def/statistical-dimension/inland-area> "6058.1" ;
+	<http://example.org/def/statistical-dimension/population-density> "37.074330235552395" ;
+	<http://example.org/def/statistical-dimension/average-age> "38.465072470599324" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.442564559216386" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "64.20302760463046" ;
+	<http://example.org/def/statistical-dimension/retired-population> "15.271593944790741" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "8.4" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "1" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "0.9" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Mauritius" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "0.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.5" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "10.1" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "26" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "215000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1438.41" ;
+	<http://example.org/def/statistical-dimension/new-homes> "170" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "41.1" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "38.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "2.1" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "11.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "5.6" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "59.3" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "12.10920053595355" .
+
+<http://example.org/dataset/london-boroughs/brent> a qb:Observation .
+
+<http://example.org/brent> rdfs:label "Brent" .
+
+<http://example.org/dataset/london-boroughs/brent> <http://example.org/def/statistical-dimension/area-name> <http://example.org/brent> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "292300" ;
+	<http://example.org/def/statistical-dimension/household> "108400" ;
+	<http://example.org/def/statistical-dimension/inland-area> "4323.3" ;
+	<http://example.org/def/statistical-dimension/population-density> "67.61039021118127" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.17131804890355" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.11871365035922" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.30961341087924" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.179267875470407" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "53.3" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "6.6" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Romania" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.6" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "3.5" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.3" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.7" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "28.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "283000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1368.76" ;
+	<http://example.org/def/statistical-dimension/new-homes> "390" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "22.3" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "29.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "11.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "9.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "23.3" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "58.2" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "58.746876595287354" .
+
+<http://example.org/dataset/london-boroughs/bromley> a qb:Observation .
+
+<http://example.org/bromley> rdfs:label "Bromley" .
+
+<http://example.org/dataset/london-boroughs/bromley> <http://example.org/def/statistical-dimension/area-name> <http://example.org/bromley> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "316600" ;
+	<http://example.org/def/statistical-dimension/household> "131500" ;
+	<http://example.org/def/statistical-dimension/inland-area> "15013.5" ;
+	<http://example.org/def/statistical-dimension/population-density> "21.087687747693742" ;
+	<http://example.org/def/statistical-dimension/average-age> "38.90739712282499" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.865445356917245" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "64.49778900821227" ;
+	<http://example.org/def/statistical-dimension/retired-population> "15.571699305116868" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "11.3" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "1.8" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.3" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "South Africa" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "0.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "8.9" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "37.2" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "275000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1301.13" ;
+	<http://example.org/def/statistical-dimension/new-homes> "670" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "33.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "42.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "1.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "10.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "10" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "67.2" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "7.95587777857536" .
+
+<http://example.org/dataset/london-boroughs/camden> a qb:Observation .
+
+<http://example.org/camden> rdfs:label "Camden" .
+
+<http://example.org/dataset/london-boroughs/camden> <http://example.org/def/statistical-dimension/area-name> <http://example.org/camden> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "213100" ;
+	<http://example.org/def/statistical-dimension/household> "98300" ;
+	<http://example.org/def/statistical-dimension/inland-area> "2178.9" ;
+	<http://example.org/def/statistical-dimension/population-density> "97.80164303088713" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.356864823563" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.388549976536838" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "73.25199436884093" ;
+	<http://example.org/def/statistical-dimension/retired-population> "9.99530736743313" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "41.7" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.6" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.6" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.2" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "11.2" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "55.3" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "475000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1331.59" ;
+	<http://example.org/def/statistical-dimension/new-homes> "540" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "18.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "16.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "23.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "28.2" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "51.3" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "53.725005375188125" .
+
+<http://example.org/dataset/london-boroughs/croydon> a qb:Observation .
+
+<http://example.org/croydon> rdfs:label "Croydon" .
+
+<http://example.org/dataset/london-boroughs/croydon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/croydon> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "357400" ;
+	<http://example.org/def/statistical-dimension/household> "149300" ;
+	<http://example.org/def/statistical-dimension/inland-area> "8650.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "41.31600850827708" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.01976343431448" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.163961947397874" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.22104085058757" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.926692781197538" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "29.4" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3.2" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.9" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ghana" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "12.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "40.4" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "220000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1459.93" ;
+	<http://example.org/def/statistical-dimension/new-homes> "1120" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "27.5" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "34.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "9.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "5.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "18.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "55.7" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "25.978839544443694" .
+
+<http://example.org/dataset/london-boroughs/ealing> a qb:Observation .
+
+<http://example.org/ealing> rdfs:label "Ealing" .
+
+<http://example.org/dataset/london-boroughs/ealing> <http://example.org/def/statistical-dimension/area-name> <http://example.org/ealing> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "333500" ;
+	<http://example.org/def/statistical-dimension/household> "124900" ;
+	<http://example.org/def/statistical-dimension/inland-area> "5554.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "60.04248883767824" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.01804287303996" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.88455772113943" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.4872563718141" ;
+	<http://example.org/def/statistical-dimension/retired-population> "11.694152923538232" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "44.5" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "7.8" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Poland" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Somalia" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.3" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.9" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "12" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "39.9" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "279950" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1369.75" ;
+	<http://example.org/def/statistical-dimension/new-homes> "260" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "25" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "27.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "14.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "6.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "23.5" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "60.6" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "56.04794398016816" .
+
+<http://example.org/dataset/london-boroughs/enfield> a qb:Observation .
+
+<http://example.org/enfield> rdfs:label "Enfield" .
+
+<http://example.org/dataset/london-boroughs/enfield> <http://example.org/def/statistical-dimension/area-name> <http://example.org/enfield> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "302000" ;
+	<http://example.org/def/statistical-dimension/household> "120000" ;
+	<http://example.org/def/statistical-dimension/inland-area> "8083.2" ;
+	<http://example.org/def/statistical-dimension/population-density> "37.361441013460016" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.40744477478134" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.960264900662251" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "64.3046357615894" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.649006622516556" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "34.5" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Turkey" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4.9" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.6" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.4" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "34.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "240000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1410.16" ;
+	<http://example.org/def/statistical-dimension/new-homes> "460" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "25.5" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "36.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "14.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "5.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "16.2" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "55.3" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "43.73501997336884" .
+
+<http://example.org/dataset/london-boroughs/greenwich> a qb:Observation .
+
+<http://example.org/greenwich> rdfs:label "Greenwich" .
+
+<http://example.org/dataset/london-boroughs/greenwich> <http://example.org/def/statistical-dimension/area-name> <http://example.org/greenwich> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "251800" ;
+	<http://example.org/def/statistical-dimension/household> "105100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "4733.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "53.196433853044326" ;
+	<http://example.org/def/statistical-dimension/average-age> "35.649356872635565" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.437648927720414" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.64733915806195" ;
+	<http://example.org/def/statistical-dimension/retired-population> "11.437648927720414" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "27.9" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.9" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ghana" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.7" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "36.2" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "245000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1290.86" ;
+	<http://example.org/def/statistical-dimension/new-homes> "990" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "18.9" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "29" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "25.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "8.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "17.7" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "53.1" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "37.64240874215299" .
+
+<http://example.org/dataset/london-boroughs/hackney> a qb:Observation .
+
+<http://example.org/hackney> rdfs:label "Hackney" .
+
+<http://example.org/dataset/london-boroughs/hackney> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hackney> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "238500" ;
+	<http://example.org/def/statistical-dimension/household> "97800" ;
+	<http://example.org/def/statistical-dimension/inland-area> "1904.9" ;
+	<http://example.org/def/statistical-dimension/population-density> "125.20342275185048" ;
+	<http://example.org/def/statistical-dimension/average-age> "33.305632792198786" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.49475890985325" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "69.43396226415094" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.09224318658281" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "36.4" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.2" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.1" ;
+	<http://example.org/def/statistical-dimension/unemployment> "10.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "19.4" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "43" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "292500" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1308.27" ;
+	<http://example.org/def/statistical-dimension/new-homes> "1630" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "13.7" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "22.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "23.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "17.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "21.3" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "54.5" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "52.531161409350666" .
+
+<http://example.org/dataset/london-boroughs/hammersmith-and-fulham> a qb:Observation .
+
+<http://example.org/hammersmith-and-fulham> rdfs:label "Hammersmith and Fulham" .
+
+<http://example.org/dataset/london-boroughs/hammersmith-and-fulham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hammersmith-and-fulham> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "189800" ;
+	<http://example.org/def/statistical-dimension/household> "79100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "1639.7" ;
+	<http://example.org/def/statistical-dimension/population-density> "115.75288162468743" ;
+	<http://example.org/def/statistical-dimension/average-age> "34.766301439092906" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.644889357218126" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "73.65648050579557" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.956796628029505" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "41" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "France" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.3" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.2" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.9" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "13.3" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "50.5" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "455000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1121.6" ;
+	<http://example.org/def/statistical-dimension/new-homes> "460" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "14.6" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "22.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "19.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "15.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "25.1" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "57.5" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "46.47135327537819" .
+
+<http://example.org/dataset/london-boroughs/haringey> a qb:Observation .
+
+<http://example.org/haringey> rdfs:label "Haringey" .
+
+<http://example.org/dataset/london-boroughs/haringey> <http://example.org/def/statistical-dimension/area-name> <http://example.org/haringey> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "240900" ;
+	<http://example.org/def/statistical-dimension/household> "99700" ;
+	<http://example.org/def/statistical-dimension/inland-area> "2959.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "81.39063450233124" ;
+	<http://example.org/def/statistical-dimension/average-age> "33.75526450828865" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.743877127438772" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "70.56870070568701" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.468244084682441" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "42.1" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Turkey" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.9" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.2" ;
+	<http://example.org/def/statistical-dimension/unemployment> "10.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "17.5" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "42.7" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "290000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1494.14" ;
+	<http://example.org/def/statistical-dimension/new-homes> "540" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "18.6" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "27.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "19.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "9.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "23.6" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "50.6" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "50.915422885572134" .
+
+<http://example.org/dataset/london-boroughs/harrow> a qb:Observation .
+
+<http://example.org/harrow> rdfs:label "Harrow" .
+
+<http://example.org/dataset/london-boroughs/harrow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/harrow> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "231600" ;
+	<http://example.org/def/statistical-dimension/household> "85100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "5046.3" ;
+	<http://example.org/def/statistical-dimension/population-density> "45.89501218714702" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.347967422056364" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.09671848013817" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.3713298791019" ;
+	<http://example.org/def/statistical-dimension/retired-population> "13.5146804835924" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "46" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "8" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Kenya" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "6.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Sri Lanka" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "3.8" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.5" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "8.6" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "34.9" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "292000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1496.37" ;
+	<http://example.org/def/statistical-dimension/new-homes> "440" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "26.6" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "39.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "8.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "3.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "19.5" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "64.6" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "53.71231438428079" .
+
+<http://example.org/dataset/london-boroughs/havering> a qb:Observation .
+
+<http://example.org/havering> rdfs:label "Havering" .
+
+<http://example.org/dataset/london-boroughs/havering> <http://example.org/def/statistical-dimension/area-name> <http://example.org/havering> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "235700" ;
+	<http://example.org/def/statistical-dimension/household> "96300" ;
+	<http://example.org/def/statistical-dimension/inland-area> "11235" ;
+	<http://example.org/def/statistical-dimension/population-density> "20.979083222073875" ;
+	<http://example.org/def/statistical-dimension/average-age> "38.91113508288429" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.049215103945695" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "66.05854900296988" ;
+	<http://example.org/def/statistical-dimension/retired-population> "15.400933389902418" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "8.1" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "1.3" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "0.7" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.3" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "10.4" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "17.5" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "220000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1505" ;
+	<http://example.org/def/statistical-dimension/new-homes> "430" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "36.1" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "40.7" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "13.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "2.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "5.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "61.1" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "7.920761480932073" .
+
+<http://example.org/dataset/london-boroughs/hillingdon> a qb:Observation .
+
+<http://example.org/hillingdon> rdfs:label "Hillingdon" .
+
+<http://example.org/dataset/london-boroughs/hillingdon> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hillingdon> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "273600" ;
+	<http://example.org/def/statistical-dimension/household> "105300" ;
+	<http://example.org/def/statistical-dimension/inland-area> "11570.1" ;
+	<http://example.org/def/statistical-dimension/population-density> "23.647159488682032" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.39907705183607" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.476608187134502" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.46052631578947" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.463450292397662" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "29.1" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4.8" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Sri Lanka" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.1" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Kenya" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.1" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "9.9" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "27.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "249999" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1422.75" ;
+	<http://example.org/def/statistical-dimension/new-homes> "300" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "21.4" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "43.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "12.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "3.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "17.4" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "58.8" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "35.97560975609756" .
+
+<http://example.org/dataset/london-boroughs/hounslow> a qb:Observation .
+
+<http://example.org/hounslow> rdfs:label "Hounslow" .
+
+<http://example.org/dataset/london-boroughs/hounslow> <http://example.org/def/statistical-dimension/area-name> <http://example.org/hounslow> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "245000" ;
+	<http://example.org/def/statistical-dimension/household> "93500" ;
+	<http://example.org/def/statistical-dimension/inland-area> "5597.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "43.767194254885844" ;
+	<http://example.org/def/statistical-dimension/average-age> "35.198767096545346" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.591836734693878" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "66.53061224489795" ;
+	<http://example.org/def/statistical-dimension/retired-population> "10.73469387755102" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "38.8" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "10.2" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Kenya" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Poland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.2" ;
+	<http://example.org/def/statistical-dimension/unemployment> "7.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "10.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "35" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "249950" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1400.47" ;
+	<http://example.org/def/statistical-dimension/new-homes> "670" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "19.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "34" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "14.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "7.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "22.7" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "56.4" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "56.19802993475758" .
+
+<http://example.org/dataset/london-boroughs/islington> a qb:Observation .
+
+<http://example.org/islington> rdfs:label "Islington" .
+
+<http://example.org/dataset/london-boroughs/islington> <http://example.org/def/statistical-dimension/area-name> <http://example.org/islington> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "213800" ;
+	<http://example.org/def/statistical-dimension/household> "95700" ;
+	<http://example.org/def/statistical-dimension/inland-area> "1485.7" ;
+	<http://example.org/def/statistical-dimension/population-density> "143.9052298579794" ;
+	<http://example.org/def/statistical-dimension/average-age> "34.82037463649353" ;
+	<http://example.org/def/statistical-dimension/young-population> "13.42376052385407" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "76.23947614593078" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.278765201122544" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "28.4" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3.6" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Turkey" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.2" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.2" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "16.4" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "55.9" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "385000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1271.69" ;
+	<http://example.org/def/statistical-dimension/new-homes> "510" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "12.7" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "27.7" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "24.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "11.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "21.1" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "51.2" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "45.076586433260395" .
+
+<http://example.org/dataset/london-boroughs/kensington-and-chelsea> a qb:Observation .
+
+<http://example.org/kensington-and-chelsea> rdfs:label "Kensington and Chelsea" .
+
+<http://example.org/dataset/london-boroughs/kensington-and-chelsea> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kensington-and-chelsea> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "166000" ;
+	<http://example.org/def/statistical-dimension/household> "83500" ;
+	<http://example.org/def/statistical-dimension/inland-area> "1212.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "136.9185087429891" ;
+	<http://example.org/def/statistical-dimension/average-age> "39.380805204373026" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.180722891566266" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "70.24096385542168" ;
+	<http://example.org/def/statistical-dimension/retired-population> "14.036144578313253" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "46.3" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "France" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4.3" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "South Africa" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.9" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "9.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "55.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "750000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1092.4" ;
+	<http://example.org/def/statistical-dimension/new-homes> "170" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "24.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "16" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "13" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "19.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "20.5" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "67.4" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "54.14712153518124" .
+
+<http://example.org/dataset/london-boroughs/kingston-upon-thames> a qb:Observation .
+
+<http://example.org/kingston-upon-thames> rdfs:label "Kingston upon Thames" .
+
+<http://example.org/dataset/london-boroughs/kingston-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/kingston-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "160100" ;
+	<http://example.org/def/statistical-dimension/household> "64900" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3726.1" ;
+	<http://example.org/def/statistical-dimension/population-density> "42.96717747779179" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.25811589762911" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.36789506558401" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "68.76951905059337" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.179887570268583" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "23.8" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Korea (South)" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Sri Lanka" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.1" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.7" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "5.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "52.3" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "300500" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1662.54" ;
+	<http://example.org/def/statistical-dimension/new-homes> "140" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "27.9" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "40.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "17.5" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "67.3" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "28.9340885684861" .
+
+<http://example.org/dataset/london-boroughs/lambeth> a qb:Observation .
+
+<http://example.org/lambeth> rdfs:label "Lambeth" .
+
+<http://example.org/dataset/london-boroughs/lambeth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lambeth> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "299400" ;
+	<http://example.org/def/statistical-dimension/household> "130700" ;
+	<http://example.org/def/statistical-dimension/inland-area> "2681" ;
+	<http://example.org/def/statistical-dimension/population-density> "111.67474822827303" ;
+	<http://example.org/def/statistical-dimension/average-age> "33.9512535185256" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.758851035404142" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "73.41349365397461" ;
+	<http://example.org/def/statistical-dimension/retired-population> "7.849031396125585" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "36" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3.3" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Portugal" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.1" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.9" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "14.9" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "54.7" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "302500" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1235.11" ;
+	<http://example.org/def/statistical-dimension/new-homes> "1340" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "13.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "26.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "23.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "12.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "22.7" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "54.7" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "44.7016343595591" .
+
+<http://example.org/dataset/london-boroughs/lewisham> a qb:Observation .
+
+<http://example.org/lewisham> rdfs:label "Lewisham" .
+
+<http://example.org/dataset/london-boroughs/lewisham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/lewisham> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "274800" ;
+	<http://example.org/def/statistical-dimension/household> "116600" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3514.9" ;
+	<http://example.org/def/statistical-dimension/population-density> "78.18145608694415" ;
+	<http://example.org/def/statistical-dimension/average-age> "34.29336282701556" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.60844250363901" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "70.08733624454149" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.697234352256187" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "27.5" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4.3" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Jamaica" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Poland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.3" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "45.9" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "235000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1351.93" ;
+	<http://example.org/def/statistical-dimension/new-homes> "730" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "16.3" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "33" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "20.1" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "18.8" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "50.1" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "29.675851423692073" .
+
+<http://example.org/dataset/london-boroughs/merton> a qb:Observation .
+
+<http://example.org/merton> rdfs:label "Merton" .
+
+<http://example.org/dataset/london-boroughs/merton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/merton> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "201900" ;
+	<http://example.org/def/statistical-dimension/household> "84100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3762.5" ;
+	<http://example.org/def/statistical-dimension/population-density> "53.66112956810631" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.160580096645866" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.25260029717682" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "66.17137196631995" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.63001485884101" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "39.7" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "South Africa" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "3.8" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Pakistan" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.4" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.7" ;
+	<http://example.org/def/statistical-dimension/unemployment> "6.6" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "7.6" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "50" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "289975" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1416.39" ;
+	<http://example.org/def/statistical-dimension/new-homes> "360" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "24.2" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "39.7" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "5.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "19.1" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "58.1" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "36.639566395663955" .
+
+<http://example.org/dataset/london-boroughs/newham> a qb:Observation .
+
+<http://example.org/newham> rdfs:label "Newham" .
+
+<http://example.org/dataset/london-boroughs/newham> <http://example.org/def/statistical-dimension/area-name> <http://example.org/newham> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "302500" ;
+	<http://example.org/def/statistical-dimension/household> "103400" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3619.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "83.56815293662633" ;
+	<http://example.org/def/statistical-dimension/average-age> "31.837590877997876" ;
+	<http://example.org/def/statistical-dimension/young-population> "13.322314049586778" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "68.4297520661157" ;
+	<http://example.org/def/statistical-dimension/retired-population> "7.074380165289257" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "54.9" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "7.4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "7.3" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Pakistan" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "5.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "13.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "18.6" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "28" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "220000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1255.45" ;
+	<http://example.org/def/statistical-dimension/new-homes> "790" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "14.5" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "19.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "21.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "9.4" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "33.6" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "51.8" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "70.68884503336153" .
+
+<http://example.org/dataset/london-boroughs/redbridge> a qb:Observation .
+
+<http://example.org/redbridge> rdfs:label "Redbridge" .
+
+<http://example.org/dataset/london-boroughs/redbridge> <http://example.org/def/statistical-dimension/area-name> <http://example.org/redbridge> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "269300" ;
+	<http://example.org/def/statistical-dimension/household> "100600" ;
+	<http://example.org/def/statistical-dimension/inland-area> "5641.9" ;
+	<http://example.org/def/statistical-dimension/population-density> "47.732146971764834" ;
+	<http://example.org/def/statistical-dimension/average-age> "36.017176849693584" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.325659116227255" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "63.86929075380616" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.47679168213888" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "34.1" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "7.4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Pakistan" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "4.1" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Sri Lanka" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.5" ;
+	<http://example.org/def/statistical-dimension/unemployment> "8.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "10.8" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "35" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "250000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1405.35" ;
+	<http://example.org/def/statistical-dimension/new-homes> "460" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "30" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "40.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "7.2" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "3.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "17.6" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "67.8" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "56.57157713124247" .
+
+<http://example.org/dataset/london-boroughs/richmond-upon-thames> a qb:Observation .
+
+<http://example.org/richmond-upon-thames> rdfs:label "Richmond upon Thames" .
+
+<http://example.org/dataset/london-boroughs/richmond-upon-thames> <http://example.org/def/statistical-dimension/area-name> <http://example.org/richmond-upon-thames> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "191500" ;
+	<http://example.org/def/statistical-dimension/household> "80100" ;
+	<http://example.org/def/statistical-dimension/inland-area> "5740.7" ;
+	<http://example.org/def/statistical-dimension/population-density> "33.3583012524605" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.14746694424321" ;
+	<http://example.org/def/statistical-dimension/young-population> "10.861618798955613" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "66.42297650130548" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.689295039164492" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "23.6" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "South Africa" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.4" ;
+	<http://example.org/def/statistical-dimension/unemployment> "5.8" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "5.6" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "54.9" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "400000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1597.21" ;
+	<http://example.org/def/statistical-dimension/new-homes> "320" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "34.5" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "35.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "2.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "7.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "17.4" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "70.4" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "18.92618954211736" .
+
+<http://example.org/dataset/london-boroughs/southwark> a qb:Observation .
+
+<http://example.org/southwark> rdfs:label "Southwark" .
+
+<http://example.org/dataset/london-boroughs/southwark> <http://example.org/def/statistical-dimension/area-name> <http://example.org/southwark> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "294800" ;
+	<http://example.org/def/statistical-dimension/household> "122400" ;
+	<http://example.org/def/statistical-dimension/inland-area> "2886.2" ;
+	<http://example.org/def/statistical-dimension/population-density> "102.14122375441758" ;
+	<http://example.org/def/statistical-dimension/average-age> "33.99273730851726" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.720488466757123" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "72.55766621438264" ;
+	<http://example.org/def/statistical-dimension/retired-population> "8.242876526458616" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "33.4" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Nigeria" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.6" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "France" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.7" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Brazil" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.6" ;
+	<http://example.org/def/statistical-dimension/unemployment> "9.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "14.2" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "49.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "315000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1221.96" ;
+	<http://example.org/def/statistical-dimension/new-homes> "1430" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "10.8" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "24.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "33.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "10" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "19.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "56" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "41.72402271967925" .
+
+<http://example.org/dataset/london-boroughs/sutton> a qb:Observation .
+
+<http://example.org/sutton> rdfs:label "Sutton" .
+
+<http://example.org/dataset/london-boroughs/sutton> <http://example.org/def/statistical-dimension/area-name> <http://example.org/sutton> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "185400" ;
+	<http://example.org/def/statistical-dimension/household> "81200" ;
+	<http://example.org/def/statistical-dimension/inland-area> "4384.7" ;
+	<http://example.org/def/statistical-dimension/population-density> "42.28339453098274" ;
+	<http://example.org/def/statistical-dimension/average-age> "37.40347582811357" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.21898597626753" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.26429341963322" ;
+	<http://example.org/def/statistical-dimension/retired-population> "13.430420711974108" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "17.7" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.7" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Sri Lanka" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Ireland" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.4" ;
+	<http://example.org/def/statistical-dimension/unemployment> "7" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "8.5" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "36.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "235000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1450.71" ;
+	<http://example.org/def/statistical-dimension/new-homes> "330" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "29" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "42.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "11.7" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "10.5" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "64" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "17.002620087336247" .
+
+<http://example.org/dataset/london-boroughs/tower-hamlets> a qb:Observation .
+
+<http://example.org/tower-hamlets> rdfs:label "Tower Hamlets" .
+
+<http://example.org/dataset/london-boroughs/tower-hamlets> <http://example.org/def/statistical-dimension/area-name> <http://example.org/tower-hamlets> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "251900" ;
+	<http://example.org/def/statistical-dimension/household> "103500" ;
+	<http://example.org/def/statistical-dimension/inland-area> "1978.1" ;
+	<http://example.org/def/statistical-dimension/population-density> "127.34442141448865" ;
+	<http://example.org/def/statistical-dimension/average-age> "32.30476280614768" ;
+	<http://example.org/def/statistical-dimension/young-population> "13.815005954743945" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "71.02024612941644" ;
+	<http://example.org/def/statistical-dimension/retired-population> "7.1456927352123865" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "39.2" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "18.7" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "India" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.3" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "China" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.4" ;
+	<http://example.org/def/statistical-dimension/unemployment> "12.1" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.7" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "39.5" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "305000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1195.34" ;
+	<http://example.org/def/statistical-dimension/new-homes> "1300" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "9.5" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "20.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "23.5" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "19.1" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "25.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "52.2" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "74.73923180758375" .
+
+<http://example.org/dataset/london-boroughs/waltham-forest> a qb:Observation .
+
+<http://example.org/waltham-forest> rdfs:label "Waltham Forest" .
+
+<http://example.org/dataset/london-boroughs/waltham-forest> <http://example.org/def/statistical-dimension/area-name> <http://example.org/waltham-forest> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "247100" ;
+	<http://example.org/def/statistical-dimension/household> "94800" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3880.8" ;
+	<http://example.org/def/statistical-dimension/population-density> "63.672438672438666" ;
+	<http://example.org/def/statistical-dimension/average-age> "34.94031338309452" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.371914204775395" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "65.19627681100769" ;
+	<http://example.org/def/statistical-dimension/retired-population> "10.724403075677863" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "34" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "Pakistan" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4.1" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Poland" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "3.5" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Romania" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.7" ;
+	<http://example.org/def/statistical-dimension/unemployment> "11.4" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "15.4" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "31.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "230000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "1462.03" ;
+	<http://example.org/def/statistical-dimension/new-homes> "420" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "18" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "31.1" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "17.3" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "11.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "20.9" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "54.2" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "47.787582629598" .
+
+<http://example.org/dataset/london-boroughs/wandsworth> a qb:Observation .
+
+<http://example.org/wandsworth> rdfs:label "Wandsworth" .
+
+<http://example.org/dataset/london-boroughs/wandsworth> <http://example.org/def/statistical-dimension/area-name> <http://example.org/wandsworth> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "313000" ;
+	<http://example.org/def/statistical-dimension/household> "127900" ;
+	<http://example.org/def/statistical-dimension/inland-area> "3426.4" ;
+	<http://example.org/def/statistical-dimension/population-density> "91.34952136353023" ;
+	<http://example.org/def/statistical-dimension/average-age> "33.83864204220993" ;
+	<http://example.org/def/statistical-dimension/young-population> "12.587859424920127" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "74.05750798722045" ;
+	<http://example.org/def/statistical-dimension/retired-population> "7.827476038338658" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "34" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "2.1" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "Brazil" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "South Africa" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "1.9" ;
+	<http://example.org/def/statistical-dimension/unemployment> "7" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "9.1" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "63.6" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "379950" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "686.88" ;
+	<http://example.org/def/statistical-dimension/new-homes> "480" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "14.7" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "32.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "14.1" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "5.9" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "31.3" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "57.5" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "42.71655934880331" .
+
+<http://example.org/dataset/london-boroughs/westminster> a qb:Observation .
+
+<http://example.org/westminster> rdfs:label "Westminster" .
+
+<http://example.org/dataset/london-boroughs/westminster> <http://example.org/def/statistical-dimension/area-name> <http://example.org/westminster> ;
+	qb:dataSet <http://example.org/dataset/london-boroughs> ;
+	<http://example.org/def/statistical-dimension/population> "221300" ;
+	<http://example.org/def/statistical-dimension/household> "107400" ;
+	<http://example.org/def/statistical-dimension/inland-area> "2148.7" ;
+	<http://example.org/def/statistical-dimension/population-density> "102.99250709731466" ;
+	<http://example.org/def/statistical-dimension/average-age> "38.1787089302398" ;
+	<http://example.org/def/statistical-dimension/young-population> "11.522819701762312" ;
+	<http://example.org/def/statistical-dimension/working-age-population> "73.11342069588792" ;
+	<http://example.org/def/statistical-dimension/retired-population> "12.200632625395391" ;
+	<http://example.org/def/statistical-dimension/born-abroad> "52.2" ;
+	<http://example.org/def/statistical-dimension/largest-migrant-group> "United States" ;
+	<http://example.org/def/statistical-dimension/percentage-larg-migrant-group> "4" ;
+	<http://example.org/def/statistical-dimension/second-largest-migrant-group> "France" ;
+	<http://example.org/def/statistical-dimension/perc-sec-larg-mig-group> "2.9" ;
+	<http://example.org/def/statistical-dimension/third-largest-migrant-group> "Bangladesh" ;
+	<http://example.org/def/statistical-dimension/perc-third-larg-mig-group> "2.5" ;
+	<http://example.org/def/statistical-dimension/unemployment> "7.7" ;
+	<http://example.org/def/statistical-dimension/claim-out-of-work-benefits> "10" ;
+	<http://example.org/def/statistical-dimension/highly-qualified> "55.5" ;
+	<http://example.org/def/statistical-dimension/median-property-price> "585000" ;
+	<http://example.org/def/statistical-dimension/band-D-council-tax> "687.89" ;
+	<http://example.org/def/statistical-dimension/new-homes> "760" ;
+	<http://example.org/def/statistical-dimension/homes-owned> "18.9" ;
+	<http://example.org/def/statistical-dimension/homes-bought-by-mortgage> "16.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-local-authority> "15.8" ;
+	<http://example.org/def/statistical-dimension/homes-rented-from-housing-association> "14.6" ;
+	<http://example.org/def/statistical-dimension/homes-rented-private> "28.7" ;
+	<http://example.org/def/statistical-dimension/high-GCSE> "59.4" ;
+	<http://example.org/def/statistical-dimension/pupils-other-lang> "68.26120814328624" .
